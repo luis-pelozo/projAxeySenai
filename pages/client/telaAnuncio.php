@@ -56,7 +56,7 @@
         </nav> -->
     </header>
 
-    <section class="">
+    <section class="anuncipo mx-5 py-5">
         <div class="main container d-flex">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -79,12 +79,17 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="legenda">
-                <p></p>
-            </div>
-            <div class="group-buttom">
-                <button type="button" class="btn btn-primary">Entre em contato</button>
-                <button type="button" class="btn btn-primary">Verificar disponibilidade</button>
+            <div class="main-group-func">
+                <div class="icon">
+
+                </div>
+                <div class="legenda">
+                    <p>dasda</p>
+                </div>
+                <div class="group-buttom">
+                    <button type="button" class="btn btn-primary"><span></span>Entre em contato</button>
+                    <button type="button" class="btn btn-primary">Verificar disponibilidade</button>
+                </div>
             </div>
         </div>
     </section>
@@ -117,15 +122,6 @@
                             <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
                         </div>
@@ -134,10 +130,6 @@
             </div>
         </div>
     </section>
-
-    <footer class="container">
-        <p>Sla teste</p>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
