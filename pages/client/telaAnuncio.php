@@ -78,7 +78,7 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="main-group-func flex-wrap object-fit d-flex align-self-center">
+            <div class="main-group-func container flex-wrap object-fit d-flex align-self-center">
                 <div class="icon img-fluid container altera-img">
                     <img src="../../assets/img/icones_usuario/854888-200.png" alt="" class="rounded-circle">
                 </div>
