@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,28 +46,27 @@
                         </li>
                     </ul>
 
-
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
             </div>
-        </nav> -->
+        </nav>
     </header>
 
     <section class="anuncipo mx-5 py-5">
         <div class="main container d-flex">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner rounded-4">
                     <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -79,16 +78,18 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="main-group-func">
-                <div class="icon">
-
+            <div class="main-group-func container flex-wrap object-fit">
+                <div class="icon img-fluid container altera-img">
+                    <img src="../../assets/img/icones_usuario/854888-200.png" alt="" class="rounded-circle">
                 </div>
-                <div class="legenda">
-                    <p>dasda</p>
+                <div class="legenda container text-center">
+                    <p>illum quae eligendi unde ipsa reiciendis dolor assumenda voluptates recusandae animi nesciunt earum laboriosam.</p>
                 </div>
-                <div class="group-buttom">
-                    <button type="button" class="btn btn-primary"><span></span>Entre em contato</button>
-                    <button type="button" class="btn btn-primary">Verificar disponibilidade</button>
+                <div class="buttom-gourp d-flex flex-column container">
+                    <a type="submit" class="btn btn-success"><span></span>Entre em contato</a>
+                    <div class="group-buttom d-flex flex-column py-2">
+                        <a type="submit" class="btn btn-primary">Verificar disponibilidade</a>
+                    </div>
                 </div>
             </div>
         </div>
