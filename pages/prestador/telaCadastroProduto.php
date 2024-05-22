@@ -112,7 +112,7 @@
                 </div>
                 <div class="form-group">
                     <label for="mensagem">Observação</label>
-                    <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="4"></textarea>
+                    <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="4" required></textarea>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn text-light" style="background-color: #1B3C54; width: 57%;">Enviar</button>
