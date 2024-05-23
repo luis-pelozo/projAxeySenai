@@ -78,14 +78,16 @@
                     <textarea class="form-control" id="serviceDescription" name="serviceDescription" rows="4" maxlength="900" required></textarea>
                     <small class="char-counter"><span id="charCount">0</span>/900 caracteres</small>
                 </div>
-                <div class="form-group">
-                    <label for="serviceImages">Imagens</label>
-                    <input type="file" class="form-control-file" id="serviceImages" name="serviceImages[]" multiple accept="image/*" onchange="previewImages()">
-                    <div id="imagePreview" class="preview d-flex flex-wrap"></div>
-                </div>
-                <div class="form-group">
-                    <label for="serviceVideos">Vídeos</label>
-                    <input type="file" class="form-control-file" id="serviceVideos" name="serviceVideos[]" multiple accept="video/*">
+                <div class="d-flex justify-content-around">
+                    <div class="form-group">
+                        <label for="serviceImages">Imagens</label>
+                        <input type="file" class="form-control-file" id="serviceImages" name="serviceImages[]" multiple accept="image/*" onchange="previewImages()">
+                        <div id="imagePreview" class="preview d-flex flex-wrap"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceVideos">Vídeos</label>
+                        <input type="file" class="form-control-file" id="serviceVideos" name="serviceVideos[]" multiple accept="video/*">
+                    </div>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn text-light" style="background-color: #1B3C54; width: 57%;">Cadastrar</button>
