@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.esq {
+    background: yellow;
+    text-align: center;
+    padding: 1%;
+}
+
+.centro {
+    background: purple;
+}
+
+.dir {
+    background: gray;
+}
+.imgPerson{
+    clip-path: circle();
+}
+
+.teste{
+    margin-top: 3%;
+}
