@@ -208,7 +208,7 @@
         <!-- Dados de Perfil -->
         <div class="row d-flex flex-wrap ">
             <!-- Foto/Avaliação/Disponibilidade/Whats -->
-            <div class="col-sm-4 mb-3 mb-sm-0 left d-flex flex-wrap">
+            <div class="col-sm-4 mt-2">
                 <div class="col-sm-12">
                     <div class="text-center foto-perfil mt-2">
                         <img src="https://via.placeholder.com/150" alt="Ícone de usuário" class="mb-3" style="clip-path:circle()">
@@ -230,38 +230,72 @@
                 </div>
                 <div class="col-sm-12" style="align-items: center">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
-                    <button type="button" class="btn btn-primary" style="background-color: #0711FF; border: none; width: 75%;"> <img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">Verificar Diponibilidade </button>
+                    <button type="button" class="btn btn-primary" style="background-color: #0711FF; border: none; width: 100%;"> <img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">Verificar Diponibilidade </button>
                 </div>
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-primary mt-2" style="background-color: #47C757; border: none; width: 75%"><img src="" alt="Ícone" class="mb-3" style="background-color: #47C757; border: none; width: 25%">Entre em Contato</button>
+                    <button type="button" class="btn btn-primary mt-2" style="background-color: #47C757; border: none; width: 100%"><img src="" alt="Ícone" class="mb-3" style="background-color: #47C757; border: none; width: 25%">Entre em Contato</button>
                 </div>
             </div>
             <!-- Dados Prestador -->
             <div class="col-sm-8 mt-2">
-                <div class="col-sm-12 mt-2">
+                <div class="col-sm-12 mt-2" style="padding-left: 0;">
                     <h3 class="text-left mt-12">Nome Prestador<img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%"></h3>
+                    <h5 class="text-left mt-6">Cidade</h5>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6 mt-6">
-                        <h5 class="text-left mt-6">Cidade</h5>
-                        <div class="card" style="width: 100% ; align-items:start ; margin:0">
-                            <div class="card-body">
-                                <p class="card-text" style="text-align:center">Joinville</p>
+                <div class="row" style="margin: 1%;">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Nome</label>
+                                <input type="text" class="form-control" id="inputName">
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <h5 class="text-lef mt-6">Area de Atuação</h5>
-                        <div class="card" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body">
-                                <p class="card-text" style="text-align:center">Carpinteiro</p>
+                            <div class="form-group col-md-6">
+                                <label for="lastname">Sobrenome</label>
+                                <input type="text" class="form-control" id="inputLastName">
                             </div>
+                            <div class="form-group col-md-6">
+                                <label for="occupationarea">Área de atuação</label>
+                                <input type="text" class="form-control" id="inputOccupationArea">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" class="form-control" id="inputPhone">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cep">CEP</label>
+                                <input type="number" class="form-control" id="inputCep">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Phone">Cidade</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword5">Senha</label>
+                                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+                                    Your password must be 8-20 characters long,
+                                </small>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword5">Confirma Senha</label>
+                                <input type="password" id="inputConfirmPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+                                    Your password must be 8-20 characters long
+                                </small>
+                            </div>
+
                         </div>
-                    </div>
                 </div>
+                <button type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
+                </form>
+
             </div>
-            <!-- Avaliações  -->
         </div>
+    </div>
     </div>
     <!-- Cards de Ser -->
     <div class="services mt-5 mx-0">
@@ -314,7 +348,7 @@
             </div>
         </div>
     </div>
-    </div>
+
     <!-- Inicio Seção das avaliações -->
     <!-- Final Seção das Avaliações-->
 
