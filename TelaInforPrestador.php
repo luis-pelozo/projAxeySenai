@@ -208,7 +208,7 @@
         <!-- Dados de Perfil -->
         <div class="row d-flex flex-wrap ">
             <!-- Foto/Avaliação/Disponibilidade/Whats -->
-            <div class="col-sm-4 mt-2">
+            <div class="col-sm-4 mb-3 mb-sm-0 left d-flex flex-wrap">
                 <div class="col-sm-12">
                     <div class="text-center foto-perfil mt-2">
                         <img src="https://via.placeholder.com/150" alt="Ícone de usuário" class="mb-3" style="clip-path:circle()">
@@ -230,15 +230,15 @@
                 </div>
                 <div class="col-sm-12" style="align-items: center">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
-                    <button type="button" class="btn btn-primary" style="background-color: #0711FF; border: none; width: 100%;"> <img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">Verificar Diponibilidade </button>
+                    <button type="button" class="btn btn-primary" style="background-color: #0711FF; border: none; width: 75%;"> <img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">Verificar Diponibilidade </button>
                 </div>
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-primary mt-2" style="background-color: #47C757; border: none; width: 100%"><img src="" alt="Ícone" class="mb-3" style="background-color: #47C757; border: none; width: 25%">Entre em Contato</button>
+                    <button type="button" class="btn btn-primary mt-2" style="background-color: #47C757; border: none; width: 75%"><img src="" alt="Ícone" class="mb-3" style="background-color: #47C757; border: none; width: 25%">Entre em Contato</button>
                 </div>
             </div>
             <!-- Dados Prestador -->
-            <div class="col-sm-4 mt-2">
-                <div class="col-sm-12 mt-2" style="padding-left: 0;">
+            <div class="col-sm-8 mt-2">
+                <div class="col-sm-12 mt-2">
                     <h3 class="text-left mt-12">Nome Prestador<img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%"></h3>
                 </div>
                 <div class="row">
@@ -261,43 +261,6 @@
                 </div>
             </div>
             <!-- Avaliações  -->
-            <div class="col-sm-4 mt-2">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h3 class="text-center mt-6" style="background-color:#1B3C54 ; color:white">84 Serviços Prestados</h3>
-                    </div>
-                    <div class="col-sm-12">
-                        <h6 class="text-center mt-6">74 Voltariam a contratar seus servilos</h6>
-                    </div>
-                    <div class="col-sm-12">
-                        <h3 class="text-center mt-12">Avaliações</h3>
-                        <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body mb-2" style="padding: 0;">
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    <img src="" alt="Ícone-Usuaruo" class="mb-3 mt-1" style="background-color: #0711FF; border: none; width: 25%">Usuario 69<img src="" alt="Ícone-Avl" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">
-                                </h6>
-                                <p class="card-text " style="text-align: left">Serviço Muito Bom</p>
-                            </div>
-                        </div>
-                        <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body" style="padding: 0;">
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    <img src="" alt="Ícone-Usuaruo" class="mb-3 mt-1" style="background-color: #0711FF; border: none; width: 25%">Usuario 69<img src="" alt="Ícone-Avl" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">
-                                </h6>
-                                <p class="card-text" style="text-align: left">Serviço Muito Bom</p>
-                            </div>
-                        </div>
-                        <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body" style="padding: 0;">
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    <img src="" alt="Ícone-Usuaruo" class="mb-3 mt-1" style="background-color: #0711FF; border: none; width: 25%">Usuario 69<img src="" alt="Ícone-Avl" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">
-                                </h6>
-                                <p class="card-text" style="text-align: left">Serviço Muito Bom</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Cards de Ser -->
