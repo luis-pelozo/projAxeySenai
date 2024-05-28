@@ -241,7 +241,7 @@
             <!-- Dados Prestador -->
             <div class="col-sm-8 mt-2">
                 <div class="col-sm-12 mt-2" style="padding-left: 0;">
-                    <h3 class="text-left mt-12">Nome Prestador<img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%"></h3>
+                    <h3 class="text-left mt-12">Nome Prestador<img width="10%" height="10%" src="https://img.icons8.com/color/48/verified-badge.png" alt="verified-badge" /></h3>
                     <h5 class="text-left mt-6">Cidade</h5>
                 </div>
                 <div class="row" style="margin: 1%;">
