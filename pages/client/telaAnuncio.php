@@ -57,26 +57,28 @@
 
     <section class="anuncipo mx-5 py-5">
         <div class="main container d-flex">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner rounded-4">
-                    <div class="carousel-item active">
-                        <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
+            <div class="">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded-4">
+                        <div class="carousel-item active">
+                            <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../../assets/img/7ecd3ad4-6a7b-11ea-9de8-4adc9756b5c3_image_hires_164654.webp" class="d-block w-100" alt="...">
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
             <div class="main-group-func container flex-wrap object-fit d-flex align-self-center">
                 <div class="icon img-fluid container altera-img">
