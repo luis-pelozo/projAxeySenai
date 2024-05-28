@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Perfil Do Prestador</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- <link rel="stylesheet" href="../projAxeySenai/assets/css/style.css"> -->
     <style>
         * {
@@ -230,18 +231,20 @@
                 </div>
                 <div class="col-sm-12" style="align-items: center">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
-                    <button type="button" class="btn btn-primary" style="background-color: #0711FF; border: none; width: 100%;"> <img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">Verificar Diponibilidade </button>
+                    <button type="button" class="btn btn-primary" style="background-color: #0711FF; border: none; width: 100%;">
+                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i>Verificar Diponibilidade </button>
                 </div>
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-primary mt-2" style="background-color: #47C757; border: none; width: 100%"><img src="" alt="Ícone" class="mb-3" style="background-color: #47C757; border: none; width: 25%">Entre em Contato</button>
+                    <button type="button" class="btn btn-primary mt-2" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
                 </div>
             </div>
             <!-- Dados Prestador -->
             <div class="col-sm-4 mt-2">
                 <div class="col-sm-12 mt-2" style="padding-left: 0;">
-                    <h3 class="text-left mt-12">Nome Prestador<img src="" alt="Ícone" class="mb-3" style="background-color: #0711FF; border: none; width: 25%"></h3>
+                    <h3 class="text-left mt-12">Nome Prestador<img width="10%" height="10%" src="https://img.icons8.com/color/48/verified-badge.png" alt="verified-badge" /></h3>
                 </div>
-                <div class="row">
+
+                <div class="row d-flex flex-wrap">
                     <div class="col-sm-6 mt-6">
                         <h5 class="text-left mt-6">Cidade</h5>
                         <div class="card" style="width: 100% ; align-items:start ; margin:0">
@@ -259,6 +262,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
             <!-- Avaliações  -->
             <div class="col-sm-4 mt-2">
@@ -273,26 +277,44 @@
                         <h3 class="text-center mt-12">Avaliações</h3>
                         <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
                             <div class="card-body mb-2" style="padding: 0;">
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    <img src="" alt="Ícone-Usuaruo" class="mb-3 mt-1" style="background-color: #0711FF; border: none; width: 25%">Usuario 69<img src="" alt="Ícone-Avl" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">
+                                <h6 class="card-subtitle mb-1 text-muted" style="margin:0">
+                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1" style="margin-top: 2%;">
+                                    Usuario 69
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
                                 </h6>
                                 <p class="card-text " style="text-align: left">Serviço Muito Bom</p>
                             </div>
                         </div>
                         <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body" style="padding: 0;">
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    <img src="" alt="Ícone-Usuaruo" class="mb-3 mt-1" style="background-color: #0711FF; border: none; width: 25%">Usuario 69<img src="" alt="Ícone-Avl" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">
+                            <div class="card-body mb-2" style="padding: 0;">
+                                <h6 class="card-subtitle mb-1 text-muted" style="margin:0">
+                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1" style="margin-top: 2%;">
+                                    Usuario 69
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
                                 </h6>
-                                <p class="card-text" style="text-align: left">Serviço Muito Bom</p>
+                                <p class="card-text " style="text-align: left">Serviço Muito Bom</p>
                             </div>
                         </div>
                         <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body" style="padding: 0;">
-                                <h6 class="card-subtitle mb-2 text-muted">
-                                    <img src="" alt="Ícone-Usuaruo" class="mb-3 mt-1" style="background-color: #0711FF; border: none; width: 25%">Usuario 69<img src="" alt="Ícone-Avl" class="mb-3" style="background-color: #0711FF; border: none; width: 25%">
+                            <div class="card-body mb-2" style="padding: 0;">
+                                <h6 class="card-subtitle mb-1 text-muted" style="margin:0">
+                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1" style="margin-top: 2%;">
+                                    Usuario 69
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
+                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
                                 </h6>
-                                <p class="card-text" style="text-align: left">Serviço Muito Bom</p>
+                                <p class="card-text " style="text-align: left">Serviço Muito Bom</p>
                             </div>
                         </div>
                     </div>
