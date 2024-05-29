@@ -13,6 +13,31 @@
 </head>
 
 <body>
+    <style>
+        .services {
+            margin: 20px;
+            display: flex;
+            overflow-x: scroll;
+            gap: 10px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .services::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        .services .card {
+            flex: 0 0 20%;
+        }
+
+        .services .card img {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -57,7 +82,7 @@
 
     <section class="anuncipo mx-5 py-5">
         <div class="main container d-flex">
-            <div class="">
+            <div id="separa-divs">
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner rounded-4">
                         <div class="carousel-item active">
@@ -100,38 +125,56 @@
     <section class="serviços-semelhantes">
         <div class="container">
             <h3>Serviços Semelhantes</h3>
-            <div class="d-flex">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
+            <div class="services mt-5 mx-0">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviço 1</h5>
+                        <p class="card-text">Descrição breve do Serviço 1.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviço 2</h5>
+                        <p class="card-text">Descrição breve do Serviço 2.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviço 3</h5>
+                        <p class="card-text">Descrição breve do Serviço 3.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviço 4</h5>
+                        <p class="card-text">Descrição breve do Serviço 4.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviço 5</h5>
+                        <p class="card-text">Descrição breve do Serviço 5.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviço 6</h5>
+                        <p class="card-text">Descrição breve do Serviço 6.</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

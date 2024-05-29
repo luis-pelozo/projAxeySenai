@@ -328,56 +328,7 @@
     </div>
 
     <!-- Cards de Serviço -->
-    <div class="services mt-5 mx-0">
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 1">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 1</h5>
-                <p class="card-text">Descrição breve do Serviço 1.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 2">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 2</h5>
-                <p class="card-text">Descrição breve do Serviço 2.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 3">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 3</h5>
-                <p class="card-text">Descrição breve do Serviço 3.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 4">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 4</h5>
-                <p class="card-text">Descrição breve do Serviço 4.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 5">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 5</h5>
-                <p class="card-text">Descrição breve do Serviço 5.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 6">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 6</h5>
-                <p class="card-text">Descrição breve do Serviço 6.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-    </div>
+    
     </div>
     <!-- Inicio Seção das avaliações -->
     <!-- Final Seção das Avaliações-->
