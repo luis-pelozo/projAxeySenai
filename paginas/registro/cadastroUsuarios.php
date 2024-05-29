@@ -46,9 +46,8 @@
       min-height: 15vh;
     }
 
-    .testee {
-      margin-top: 6%;
-
+    .row {
+      margin: 0;
     }
   </style>
 </head>
@@ -60,7 +59,7 @@
     <div class="col-md-6">
       <div class="card">
         <div class="card-header text-center">
-          <img src="assets/imgs/logoPronta.png" alt="Logo da Axey" class="logo">
+          <img src="../../assets/imgs/logoPronta.png" alt="Logo da Axey" class="logo">
           <h3>Crie sua conta. É grátis!</h3>
         </div>
         <div class="card-body">
@@ -136,25 +135,26 @@
               <div class="col-md-12">
                 <label for="cep">CEP *</label>
                 <div class="form-group d-flex">
+
                   <input type="text" class="form-control col-md-4 mr-md-2" id="cep" placeholder="00000-000" required>
-                  <a class="col-md-8 mt-2" href="#">Não sei meu Cep</a>
+                  <a class="col-md-8 mt-2" href="https://buscacepinter.correios.com.br/app/endereco/index.php" id="buscarCep" target="_blank">Não sei meu Cep</a>
                 </div>
               </div>
             </div>
 
             <div class="form-row">
 
-              <div class="form-group col-md-7">
+              <div class="form-group col-md-5">
                 <label for="endereco">Endereço *</label>
                 <input type="text" class="form-control" id="endereco" placeholder="" required>
               </div>
 
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-4">
                 <label for="bairro">Bairro *</label>
                 <input type="text" class="form-control" id="bairro" placeholder="" required>
               </div>
 
-              <div class="form-group col-md-2">
+              <div class="form-group col-md-3">
                 <label for="numero">Número *</label>
                 <input type="text" class="form-control numero-menor" id="numero" required>
               </div>
@@ -191,7 +191,7 @@
 
 
             <div class="d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary" style="background-color: #1A3C53; border: none;">Cadastre-se</button>
+            <button type="submit" class="btn btn-primary" style="background-color: #1A3C53; border: none;" onclick="return validar()">Cadastre-se</button>
             </div>
             <div class="d-flex justify-content-center mt-2">
               <span>Já tem uma conta? </span>
@@ -207,7 +207,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body centraliza">
-          <img src="assets/imgs/imgLogin.png" alt="Img Login" class="logo">
+          <img src="../../assets/imgs/imgLogin.png" alt="Img Login" class="logo">
           <h3 class="divide">Vamos Começar?</h3>
           <div class="btn-selectable selecionado" id="btnCompra">Quero comprar ou contratar</div>
           <div class="btn-selectable selecionado" id="btnVende">Quero vender ou prestar serviços</div>
@@ -220,7 +220,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body centraliza">
-          <img src="assets/imgs/imgLogin.png" alt="Img Login" class="logo">
+          <img src="../../assets/imgs/imgLogin.png" alt="Img Login" class="logo">
           <h3 class="divide">Você é?</h3>
           <div class="btn-selectable selecionado2" id="btnJuridica">Pessoa Juridica<span class="texto"> (Possuo CNPJ)</span></div>
           <div class="btn-selectable selecionado2" id="btnFisica">Pessoa Fisica <span class="texto">(Não possuo CNPJ)</span></div>
@@ -229,13 +229,42 @@
     </div>
   </div>
 
-
+  <?php 
+    include '../../padroes/footer.php';
+    ?>
+  
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
   <script>
+function validar() {
+ 
+  var nome = document.getElementById("nome").value;
+  var regex = /^\S{2,}\s+\S+/; // Pelo menos duas palavras com um espaço entre elas
+  if (!regex.test(nome)) {
+    alert("O nome deve conter pelo menos duas palavras, sendo a primeira com pelo menos dois caracteres e um espaço entre elas.");
+    return false;
+  }
+  var senha = document.getElementById("senha").value;
+  var repetirSenha = document.getElementById("senha_repetida").value;
+
+  // Verifica se a senha tem pelo menos 6 caracteres
+  if (senha.length < 6) {
+    alert("A senha deve ter pelo menos 6 caracteres.");
+    return false;
+  }
+
+  // Verifica se a senha e a repetição da senha são iguais
+  if (senha !== repetirSenha) {
+    alert("As senhas não coincidem. Por favor, verifique.");
+    return false;
+  }
+  return true;
+}
+
+
     $(document).ready(function() {
       $("#confirmaUser").modal('show');
 
@@ -269,7 +298,49 @@
     $('#celular').mask('(00) 00000-0000');
     $('#telefone').mask('(00) 0000-0000');
     $('#cep').mask('00000-000');
+
+    function buscarCep() {
+  var cep = $('#cep').val().replace(/\D/g, ''); // Remove caracteres não numéricos
+  if (cep.length != 8) {
+    alert('CEP inválido. Por favor, digite um CEP válido.');
+    return;
+  }
+
+  $.ajax({
+    url: 'https://viacep.com.br/ws/' + cep + '/json/',
+    dataType: 'json',
+    success: function(data) {
+      if (!data.erro) {
+        $('#endereco').val(data.logradouro);
+        $('#bairro').val(data.bairro);
+        $('#cidade').val(data.localidade);
+        $('#estado').val(data.uf);
+        $('#numero').focus(); // Mova o foco para o campo de número após preencher o endereço
+      } else {
+        alert('CEP não encontrado. Por favor, verifique o CEP digitado.');
+      }
+    },
+    error: function() {
+      if ($('#cep').val().length == 8) {
+        alert('Erro ao buscar o CEP. Por favor, tente novamente.');
+      }
+    }
+  });
+}
+
+$('#cep').on('blur', buscarCep);
+$('#cep').on('keypress', function(event) {
+  if (event.which === 13) { // Se a tecla Enter for pressionada
+    buscarCep();
+  }
+});
+
+   
+ 
   </script>
+
+
+
 </body>
 
 </html>

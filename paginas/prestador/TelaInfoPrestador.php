@@ -157,50 +157,71 @@
         .teste {
             margin-left: 6.5%;
         }
+
+         /* Modal */
+
+         .modal-content {
+            background-color: #001f3f;
+            /* Azul marinho */
+            color: #ffffff;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .calendar-days,
+        .calendar-dates {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+        }
+
+        .calendar-day,
+        .calendar-date {
+            padding: 10px;
+            color: #ffffff;
+        }
+
+        .calendar-date:hover {
+            background-color: #f0f0f0;
+            color: #001f3f;
+            border-radius: 50%;
+        }
+
+        .btn-outline-secondary {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: #ffffff;
+            color: #001f3f;
+        }
+
+        .close {
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        .close:hover {
+            color: #f0f0f0;
+        }
+
+        /* Fim do modal */
     </style>
 </head>
 
 <body>
 
+
+<?php 
+            include '../../padroes/nav.php';
+        ?>
     <!-- Inicio do Nav -->
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
     <!-- Final do Nav -->
 
     <!-- Inicio Corpo de Pagina -->
@@ -208,13 +229,16 @@
     <div class="container">
         <!-- Dados de Perfil -->
         <div class="row d-flex flex-wrap ">
-            <!-- Foto/Avaliação/Disponibilidade/Whats -->
+            <!-- Foto/Avaliação/Botões -->
             <div class="col-sm-4 mt-2">
+                <!-- Foto de Perfil -->
                 <div class="col-sm-12">
                     <div class="text-center foto-perfil mt-2">
                         <img src="https://via.placeholder.com/150" alt="Ícone de usuário" class="mb-3" style="clip-path:circle()">
                     </div>
                 </div>
+                <!-- Final Foto de Perfil -->
+                <!-- Avaliação Estrelas-->
                 <div class="col-sm-12">
                     <div class="rate">
                         <input type="radio" id="star5" name="rate" value="5" />
@@ -229,19 +253,26 @@
                         <label for="star1" title="1 estrela">★</label>
                     </div>
                 </div>
+                <!-- Final Avaliação Estrelas -->
+                <!-- Botões -->
+                <!-- Botão Agenda -->
                 <div class="col-sm-12" style="align-items: center">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
-                    <button type="button" class="btn btn-primary" style="background-color: #0711FF; border: none; width: 100%;">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendarModal" style="background-color: #0711FF; border: none; width: 100%;">
                         <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i>Verificar Diponibilidade </button>
                 </div>
+                <!-- Final Botão agenda -->
+                <!-- Botão Whats -->
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-primary mt-2" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
+                    <button type="button" class="btn btn-success mt-2"  id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
                 </div>
+                <!-- Final Botão Whats -->
+                <!-- Final Botões -->
             </div>
             <!-- Dados Prestador -->
             <div class="col-sm-8 mt-2">
                 <div class="col-sm-12 mt-2" style="padding-left: 0;">
-                    <h3 class="text-left mt-12">Nome Prestador<img width="10%" height="10%" src="https://img.icons8.com/color/48/verified-badge.png" alt="verified-badge" /></h3>
+                    <h3 class="text-left mt-12">Nome Prestador<img width="5%" height="5%" src="https://img.icons8.com/color/48/verified-badge.png" alt="verified-badge" /></h3>
                     <h5 class="text-left mt-6">Cidade</h5>
                 </div>
                 <div class="row" style="margin: 1%;">
@@ -297,60 +328,45 @@
 
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="calendarModalLabel">Calendário</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <button id="prevMonth" class="btn btn-sm btn-outline-secondary">&lt;</button>
+                                <div id="monthYear"></div>
+                                <button id="nextMonth" class="btn btn-sm btn-outline-secondary">&gt;</button>
+                            </div>
+                            <div class="calendar-days">
+                                <div class="calendar-day">Dom</div>
+                                <div class="calendar-day">Seg</div>
+                                <div class="calendar-day">Ter</div>
+                                <div class="calendar-day">Qua</div>
+                                <div class="calendar-day">Qui</div>
+                                <div class="calendar-day">Sex</div>
+                                <div class="calendar-day">Sáb</div>
+                            </div>
+                            <div id="dates" class="calendar-dates"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Final Modal -->
     </div>
-    </div>
+    <?php 
+    include '../../padroes/footer.php';
+    ?>
     <!-- Cards de Ser -->
-    <div class="services mt-5 mx-0">
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 1">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 1</h5>
-                <p class="card-text">Descrição breve do Serviço 1.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 2">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 2</h5>
-                <p class="card-text">Descrição breve do Serviço 2.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 3">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 3</h5>
-                <p class="card-text">Descrição breve do Serviço 3.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 4">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 4</h5>
-                <p class="card-text">Descrição breve do Serviço 4.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 5">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 5</h5>
-                <p class="card-text">Descrição breve do Serviço 5.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem do Serviço 6">
-            <div class="card-body">
-                <h5 class="card-title">Serviço 6</h5>
-                <p class="card-text">Descrição breve do Serviço 6.</p>
-                <a href="#" class="btn btn-primary">Saiba mais</a>
-            </div>
-        </div>
-    </div>
-
+    <!-- Final Cards de Ser -->
     <!-- Inicio Seção das avaliações -->
     <!-- Final Seção das Avaliações-->
 
@@ -371,6 +387,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="../projAxeySenai/assets/js/modal_calendario.js"></script>
+    <script src="../projAxeySenai/assets/js/whats_link.js"></script>
 </body>
 
 </html>

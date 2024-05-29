@@ -42,6 +42,10 @@
 </head>
 
 <body>
+
+<?php 
+    include '../../padroes/nav.php';
+    ?>
     <div class="container d-flex justify-content-center">
         <div class="form-container col-12 col-md-10 col-lg-8">
             <h1 class="text-center py-2">Cadastro de Serviço / Produto</h1>
@@ -95,6 +99,10 @@
             </form>
         </div>
     </div>
+
+    <?php 
+    include '../../padroes/footer.php';
+    ?>
 
     <script>
         $(document).ready(function(){
