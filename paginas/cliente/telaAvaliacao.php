@@ -51,6 +51,10 @@
 </head>
 
 <body>
+
+    <?php
+    include '../../padroes/nav.php';
+    ?>
     <div class="container d-flex justify-content-center">
         <div class="form-container col-12 col-md-8 col-lg-6">
             <h1 class="text-center py-2">Avaliação</h1>
@@ -120,6 +124,9 @@
             </form>
         </div>
     </div>
+    <?php 
+    include '../../padroes/footer.php';
+    ?>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
