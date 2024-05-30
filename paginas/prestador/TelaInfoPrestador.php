@@ -158,9 +158,9 @@
             margin-left: 6.5%;
         }
 
-         /* Modal */
+        /* Modal */
 
-         .modal-content {
+        .modal-content {
             background-color: #001f3f;
             /* Azul marinho */
             color: #ffffff;
@@ -218,9 +218,9 @@
 <body>
 
 
-<?php 
-            include '../../padroes/nav.php';
-        ?>
+    <?php
+    include '../../padroes/nav.php';
+    ?>
     <!-- Inicio do Nav -->
     <!-- Final do Nav -->
 
@@ -264,7 +264,7 @@
                 <!-- Final Botão agenda -->
                 <!-- Botão Whats -->
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-success mt-2"  id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
+                    <button type="button" class="btn btn-success mt-2" id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
                 </div>
                 <!-- Final Botão Whats -->
                 <!-- Final Botões -->
@@ -362,7 +362,7 @@
         </div>
         <!-- Final Modal -->
     </div>
-    <?php 
+    <?php
     include '../../padroes/footer.php';
     ?>
     <!-- Cards de Ser -->

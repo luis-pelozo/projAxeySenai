@@ -43,7 +43,7 @@
 
 <body>
 
-<?php 
+    <?php
     include '../../padroes/nav.php';
     ?>
     <div class="container d-flex justify-content-center">
@@ -100,13 +100,15 @@
         </div>
     </div>
 
-    <?php 
+    <?php
     include '../../padroes/footer.php';
     ?>
 
     <script>
-        $(document).ready(function(){
-            $('#servicePrice').mask('#.##0,00', {reverse: true});
+        $(document).ready(function() {
+            $('#servicePrice').mask('#.##0,00', {
+                reverse: true
+            });
 
             $('#serviceDescription').keyup(function() {
                 var charCount = $(this).val().length;
