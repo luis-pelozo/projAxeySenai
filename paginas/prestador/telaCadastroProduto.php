@@ -106,7 +106,7 @@
 
     <script>
         $(document).ready(function() {
-            $('#servicePrice').mask('#.##0,00', {
+            $('#servicePrice').mask('#,##0.00', {
                 reverse: true
             });
 
