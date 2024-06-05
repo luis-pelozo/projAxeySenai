@@ -138,3 +138,33 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("copyright").innerHTML =
     "&copy; " + currentYear + " Axey. Todos os direitos reservados.";
 });
+
+// JS tela cadastro
+$(document).ready(function () {
+  $(".servicePrice").mask("000.000.000,00 R$", { reverse: true });
+
+  $("#serviceDescription").keyup(function () {
+    var charCount = $(this).val().length;
+    $("#charCount").text(charCount);
+  });
+});
+
+function previewImages() {
+  var preview = document.getElementById("imagePreview");
+  preview.innerHTML = "";
+  var files = document.getElementById("serviceImages").files;
+
+  for (var i = 0; i < files.length; i++) {
+    var file = files[i];
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      var img = document.createElement("img");
+      img.src = e.target.result;
+      img.classList.add("m-2");
+      preview.appendChild(img);
+    };
+
+    reader.readAsDataURL(file);
+  }
+}

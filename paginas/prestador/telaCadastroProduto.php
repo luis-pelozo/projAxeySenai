@@ -43,9 +43,8 @@
 
 <body>
 
-    <?php
-    include '../../padroes/nav.php';
-    ?>
+    <?php include '../../padroes/nav.php'; ?>
+
     <div class="container d-flex justify-content-center">
         <div class="form-container col-12 col-md-10 col-lg-8">
             <h1 class="text-center py-2">Cadastro de Serviço / Produto</h1>
@@ -70,11 +69,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="serviceDuration">Duração (horas / dias)</label>
-                        <input type="number" class="form-control" id="serviceDuration" name="serviceDuration" step="0.1" required>
+                        <input type="number" class="form-control" id="serviceDuration" name="serviceDuration" step="0.1" required placeholder="1">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="servicePrice">Valor</label>
-                        <input type="text" class="form-control" id="servicePrice" name="servicePrice" maxlength="42" required>
+                        <input type="number" class="form-control servicePrice" name="servicePrice" required placeholder="0,00 R$">
                     </div>
                 </div>
                 <div class="form-group">
@@ -82,7 +81,7 @@
                     <textarea class="form-control" id="serviceDescription" name="serviceDescription" rows="4" maxlength="900" required></textarea>
                     <small class="char-counter"><span id="charCount">0</span>/900 caracteres</small>
                 </div>
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-around flex-wrap">
                     <div class="form-group">
                         <label for="serviceImages">Imagens</label>
                         <input type="file" class="form-control-file" id="serviceImages" name="serviceImages[]" multiple accept="image/*" onchange="previewImages()">
@@ -100,15 +99,11 @@
         </div>
     </div>
 
-    <?php
-    include '../../padroes/footer.php';
-    ?>
+    <?php include '../../padroes/footer.php'; ?>
 
     <script>
         $(document).ready(function() {
-            $('#servicePrice').mask('#,##0.00', {
-                reverse: true
-            });
+            $('.servicePrice').mask('000.000.000,00 R$', { reverse: true });
 
             $('#serviceDescription').keyup(function() {
                 var charCount = $(this).val().length;
