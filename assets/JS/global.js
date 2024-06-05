@@ -132,4 +132,9 @@ $("#cep").on("keypress", function (event) {
 });
 // fim cad usuario
 
-
+//footer autaliza de forma automatica
+document.addEventListener("DOMContentLoaded", function () {
+  var currentYear = new Date().getFullYear();
+  document.getElementById("copyright").innerHTML =
+    "&copy; " + currentYear + " Axey. Todos os direitos reservados.";
+});
