@@ -70,7 +70,9 @@
         .rate {
             display: flex;
             justify-content: center;
+            flex-direction: row-reverse;
             margin-bottom: 20px;
+            
         }
 
         .rate input[type="radio"] {
