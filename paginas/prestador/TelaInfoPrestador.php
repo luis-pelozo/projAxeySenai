@@ -218,8 +218,6 @@
 </head>
 
 <body>
-
-
     <?php
     include '../../padroes/nav.php';
     ?>
