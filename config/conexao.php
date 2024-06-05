@@ -1,6 +1,6 @@
 <?
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *'); // habilitar CORS a conexao
+header('Access-Control-Allow-Origin: *'); // habilitar CORS a conexao - util pra validação dos numeros
 
 $servername = "";
 $username = "";
