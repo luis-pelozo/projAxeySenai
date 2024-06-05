@@ -255,12 +255,12 @@
                 <div class="col-sm-12" style="align-items: center">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendarModal" style="background-color: #0711FF; border: none; width: 100%;">
-                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i>Verificar Diponibilidade </button>
+                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i> Verificar Diponibilidade </button>
                 </div>
                 <!-- Final Botão agenda -->
                 <!-- Botão Whats -->
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-success mt-2" id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
+                    <button type="button" class="btn btn-success mt-2" id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i> Entre em Contato</button>
                 </div>
                 <!-- Final Botão Whats -->
                 <!-- Final Botões -->
