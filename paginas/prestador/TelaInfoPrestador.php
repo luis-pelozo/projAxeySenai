@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perfil Do Prestador</title>
+    <title>Info Prestador</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- <link rel="stylesheet" href="../projAxeySenai/assets/css/style.css"> -->
@@ -158,9 +158,9 @@
             margin-left: 6.5%;
         }
 
-        /* Modal */
+         /* Modal */
 
-        .modal-content {
+         .modal-content {
             background-color: #001f3f;
             /* Azul marinho */
             color: #ffffff;
@@ -217,6 +217,10 @@
 
 <body>
 
+
+<?php 
+            include '../../padroes/nav.php';
+        ?>
     <!-- Inicio do Nav -->
     <!-- Final do Nav -->
 
@@ -225,7 +229,7 @@
     <div class="container">
         <!-- Dados de Perfil -->
         <div class="row d-flex flex-wrap ">
-            <!-- Foto/Avaliação/Disponibilidade/Whats -->
+            <!-- Foto/Avaliação/Botões -->
             <div class="col-sm-4 mt-2">
                 <!-- Foto de Perfil -->
                 <div class="col-sm-12">
@@ -265,134 +269,110 @@
                 <!-- Final Botão Whats -->
                 <!-- Final Botões -->
             </div>
-            <!-- Final Foto/Avaliação/Disponibilidade/Whats -->
-            <!-- Dados Do Prestador -->
-            <div class="col-sm-4 mt-2">
-                <!-- Nome Prestador -->
+            <!-- Dados Prestador -->
+            <div class="col-sm-8 mt-2">
                 <div class="col-sm-12 mt-2" style="padding-left: 0;">
-                    <h3 class="text-left mt-12">Nome Prestador<img width="10%" height="10%" src="https://img.icons8.com/color/48/verified-badge.png" alt="verified-badge" /></h3>
+                    <h3 class="text-left mt-12">Nome Prestador<img width="5%" height="5%" src="https://img.icons8.com/color/48/verified-badge.png" alt="verified-badge" /></h3>
+                    <h5 class="text-left mt-6">Cidade</h5>
                 </div>
-                <!-- Final Nome Prestador -->
-                <!-- Cidade / Area de Atuação -->
-                <div class="row d-flex flex-wrap">
-                    <!-- Cidade -->
-                    <div class="col-sm-6 mt-6">
-                        <h5 class="text-left mt-6">Cidade</h5>
-                        <div class="card" style="width: 100% ; align-items:start ; margin:0">
-                            <div class="card-body">
-                                <p class="card-text" style="text-align:center">Joinville</p>
+                <div class="row" style="margin: 1%;">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Nome</label>
+                                <input type="text" class="form-control" id="inputName">
                             </div>
-                        </div>
-                    </div>
-                    <!-- Final Cidade -->
-                    <!-- Area de atuação -->
-                    <div class="col-sm-6">
-                        <h5 class="text-lef mt-6">Area de Atuação</h5>
-                        <div class="card" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body">
-                                <p class="card-text" style="text-align:center">Carpinteiro</p>
+                            <div class="form-group col-md-6">
+                                <label for="lastname">Sobrenome</label>
+                                <input type="text" class="form-control" id="inputLastName">
                             </div>
+                            <div class="form-group col-md-6">
+                                <label for="occupationarea">Área de atuação</label>
+                                <input type="text" class="form-control" id="inputOccupationArea">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" class="form-control" id="inputPhone">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cep">CEP</label>
+                                <input type="number" class="form-control" id="inputCep">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="Phone">Cidade</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword5">Senha</label>
+                                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+                                    Your password must be 8-20 characters long,
+                                </small>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword5">Confirma Senha</label>
+                                <input type="password" id="inputConfirmPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+                                    Your password must be 8-20 characters long
+                                </small>
+                            </div>
+
                         </div>
-                    </div>
-                    <!-- Final Area de Atuação -->
                 </div>
-                <!-- Final Cidade / Area de Atuação -->
+                <button type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
+                </form>
+
             </div>
-            <!-- Final Dados Do Prestador -->
-            <!-- Avaliações  -->
-            <div class="col-sm-4 mt-2">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h3 class="text-center mt-6" style="background-color:#1B3C54 ; color:white">84 Serviços Prestados</h3>
-                    </div>
-                    <div class="col-sm-12">
-                        <h6 class="text-center mt-6">74 Voltariam a contratar seus servilos</h6>
-                    </div>
-                    <div class="col-sm-12">
-                        <h3 class="text-center mt-12">Avaliações</h3>
-                        <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body mb-2" style="padding: 0;">
-                                <h6 class="card-subtitle mb-1 text-muted" style="margin:0">
-                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1" style="margin-top: 2%;">
-                                    Usuario 69
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                </h6>
-                                <p class="card-text " style="text-align: left">Serviço Muito Bom</p>
-                            </div>
-                        </div>
-                        <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body mb-2" style="padding: 0;">
-                                <h6 class="card-subtitle mb-1 text-muted" style="margin:0">
-                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1" style="margin-top: 2%;">
-                                    Usuario 69
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                </h6>
-                                <p class="card-text " style="text-align: left">Serviço Muito Bom</p>
-                            </div>
-                        </div>
-                        <div class="card mb-2" style="width:100% ; align-items:start ; margin:0">
-                            <div class="card-body mb-2" style="padding: 0;">
-                                <h6 class="card-subtitle mb-1 text-muted" style="margin:0">
-                                    <img width="50" height="50" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1" style="margin-top: 2%;">
-                                    Usuario 69
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                    <img width="5%" height="5%" src="https://img.icons8.com/fluency/48/star--v1.png" alt="star--v1" />
-                                </h6>
-                                <p class="card-text " style="text-align: left">Serviço Muito Bom</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Final Avalições -->
-            <!-- Modal -->
-            <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="calendarModalLabel">Calendário</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="calendar">
-                                <div class="calendar-header">
-                                    <button id="prevMonth" class="btn btn-sm btn-outline-secondary">&lt;</button>
-                                    <div id="monthYear"></div>
-                                    <button id="nextMonth" class="btn btn-sm btn-outline-secondary">&gt;</button>
-                                </div>
-                                <div class="calendar-days">
-                                    <div class="calendar-day">Dom</div>
-                                    <div class="calendar-day">Seg</div>
-                                    <div class="calendar-day">Ter</div>
-                                    <div class="calendar-day">Qua</div>
-                                    <div class="calendar-day">Qui</div>
-                                    <div class="calendar-day">Sex</div>
-                                    <div class="calendar-day">Sáb</div>
-                                </div>
-                                <div id="dates" class="calendar-dates"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Final Modal -->
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="calendarModalLabel">Calendário</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <button id="prevMonth" class="btn btn-sm btn-outline-secondary">&lt;</button>
+                                <div id="monthYear"></div>
+                                <button id="nextMonth" class="btn btn-sm btn-outline-secondary">&gt;</button>
+                            </div>
+                            <div class="calendar-days">
+                                <div class="calendar-day">Dom</div>
+                                <div class="calendar-day">Seg</div>
+                                <div class="calendar-day">Ter</div>
+                                <div class="calendar-day">Qua</div>
+                                <div class="calendar-day">Qui</div>
+                                <div class="calendar-day">Sex</div>
+                                <div class="calendar-day">Sáb</div>
+                            </div>
+                            <div id="dates" class="calendar-dates"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Final Modal -->
     </div>
+    <?php 
+    include '../../padroes/footer.php';
+    ?>
     <!-- Cards de Ser -->
     <!-- Final Cards de Ser -->
+    <!-- Inicio Seção das avaliações -->
+    <!-- Final Seção das Avaliações-->
+
+    <!-- Inicio de Scroll de Serviços -->
+    <!-- Final de Scroll de Serviços -->
+
     <!-- Final Corpo da pagina -->
     <!-- Inicio do Footer -->
     <!-- Final do Footer -->
