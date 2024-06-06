@@ -279,16 +279,19 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="name">Nome</label>
-                                <input type="text" class="form-control" id="inputName">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control" id="nome" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="lastname">Sobrenome</label>
-                                <input type="text" class="form-control" id="inputLastName">
+                                <label for="sobre-nome">Sobrenome</label>
+                                <input type="text" class="form-control" id="sobre-nome" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="occupationarea">Área de atuação</label>
-                                <input type="text" class="form-control" id="inputOccupationArea">
+                                <label for="seguimento">Seguimento</label>
+                                <select class="form-control" id="seguimento" required>
+                                    <option value="" disabled selected>Selecione um seguimento</option>
+                                    <option value="teste">Aqui vem do banco</option>
+                                </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="phone">Telefone</label>
@@ -303,8 +306,8 @@
                                 <input type="text" class="form-control" id="inputCity">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword5">Senha</label>
@@ -387,7 +390,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="../assets/js/modal_calendario.js"></script>
+    <script src="../../assets/js/modal_calendario.js"></script>
     <script src="../../assets/js/whats_link.js"></script>
 </body>
 
