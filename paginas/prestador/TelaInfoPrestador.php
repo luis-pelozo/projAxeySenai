@@ -294,31 +294,38 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="phone">Telefone</label>
-                                <input type="tel" class="form-control" id="inputPhone">
+                                <label for="celular">Celular</label>
+                                <input type="text" class="form-control" id="celular" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="telefone">Telefone</label>
+                                <input type="text" class="form-control" id="telefone">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="cep">CEP</label>
-                                <input type="number" class="form-control" id="inputCep">
+                                <input type="text" class="form-control" id="cep" requireds>
+                                <small id="passwordHelpBlock" class="form-text text-muted">
+                                <a  href="https://buscacepinter.correios.com.br/app/endereco/index.php" id="buscarCep" target="_blank">Não sei meu Cep</a>
+                                </small>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="Phone">Cidade</label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" class="form-control" id="cidade">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" id="email" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputPassword5">Senha</label>
-                                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                                <label for="senha">Senha</label>
+                                <input type="password" id="senha" class="form-control" aria-describedby="passwordHelpBlock" required>
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                     Your password must be 8-20 characters long,
                                 </small>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputPassword5">Confirma Senha</label>
-                                <input type="password" id="inputConfirmPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                                <label for="confirma-senha">Confirma Senha</label>
+                                <input type="password" id="cofirma-senha" class="form-control" aria-describedby="passwordHelpBlock">
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                     Your password must be 8-20 characters long
                                 </small>
