@@ -1,5 +1,6 @@
 <?php
     include '../../padroes/head.php';
+    
 ?>
     <body>
         <div class="container-fluid">
@@ -9,8 +10,7 @@
                 <input type="password" class="form-control form-control-sm" style="border-radius: 8px" placeholder="Senha">
 
                 <button type="submit" id="entrarBtn" onclick="window.location.href='../../index.php'" class="btn btn-primary btn-sm btn-block" style="color: white; border: none; background-color: #1A3C53; border-radius: 8px">Entrar</button>
-
-                
+    
                 <a href="#" class="btnEsqueciSenha btn-sm" data-toggle="modal" data-target="#esqueciSenhaModal" style="color: #00376B;">Esqueci minha senha</a>
 
                 <div class="modal fade" id="esqueciSenhaModal" tabindex="-1" role="dialog" aria-labelledby="esqueciSenhaModalLabel" aria-hidden="true">
@@ -34,7 +34,9 @@
                             <div class="modal-footer esqueciSenhaModalFooter">
                             
 
+
                                 <button type="button" class="btn btn-primary" style="background-color: #1A3C53; border: none">Recuperar Senha</button>
+
 
                             </div>
                         </div>
