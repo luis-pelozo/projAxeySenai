@@ -251,7 +251,7 @@ function validar() {
     return false;
   }
   var senha = document.getElementById("senha").value;
-  var repetirSenha = document.getElementById("senha_repetida").value;
+  var repetirSenha = document.getElementById("cofirma-senha").value;
 
   // Verifica se a senha tem pelo menos 6 caracteres
   if (senha.length < 6) {

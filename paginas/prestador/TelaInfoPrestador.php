@@ -218,10 +218,11 @@
 <body>
 
 
+ 
+    <!-- Inicio do Nav -->
     <?php
     include '../../padroes/nav.php';
     ?>
-    <!-- Inicio do Nav -->
     <!-- Final do Nav -->
 
     <!-- Inicio Corpo de Pagina -->
@@ -333,7 +334,7 @@
 
                         </div>
                 </div>
-                <button type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
+                <button type="submit" class="btn btn-primary" style="background-color: #012640; color:white " onclick="return validar()">Salvar</button>
                 </form>
 
             </div>
@@ -399,6 +400,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="../../assets/js/modal_calendario.js"></script>
     <script src="../../assets/js/whats_link.js"></script>
+    <script src="../../assets/js/valida_informacoes.js"></script>
+
 </body>
 
 </html>

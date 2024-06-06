@@ -1,14 +1,24 @@
 
 function validar() {
 
+
     var nome = document.getElementById("nome").value;
-    var regex = /^\S{2,}\s+\S+/; // Pelo menos duas palavras com um espaço entre elas
+    var regex = /^[A-Za-z]{2,}/; // Pelo menos duas palavras com um espaço entre elas
     if (!regex.test(nome)) {
-        alert("O nome deve conter pelo menos duas palavras, sendo a primeira com pelo menos dois caracteres e um espaço entre elas.");
+        alert("O nome deve conter pelo menos duas letras, sendo a primeira com pelo menos dois caracteres e um espaço entre elas.");
         return false;
     }
+
+    var sobrenome = document.getElementById("sobre-nome").value;
+    var regex = /^[A-Za-z]{2,}/; // Pelo menos duas palavras com um espaço entre elas
+    if (!regex.test(sobrenome)) {
+        alert("O sobrenome deve conter pelo menos duas letras, sendo a primeira com pelo menos dois caracteres e um espaço entre elas.");
+        return false;
+    }
+
     var senha = document.getElementById("senha").value;
-    var repetirSenha = document.getElementById("senha_repetida").value;
+    var repetirSenha = document.getElementById("cofirma-senha").value;
+    
 
     // Verifica se a senha tem pelo menos 6 caracteres
     if (senha.length < 6) {
