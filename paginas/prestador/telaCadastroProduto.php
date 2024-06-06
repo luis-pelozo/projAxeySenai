@@ -23,13 +23,15 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 50px;
+            width: 100%;
         }
 
         .form-container h1 {
             color: #1B3C54;
         }
 
-        .preview img {
+        .preview img,
+        .preview video {
             max-width: 100px;
             margin-top: 10px;
         }
@@ -79,17 +81,17 @@
                 <div class="form-group">
                     <label for="serviceDescription">Descrição</label>
                     <textarea class="form-control" id="serviceDescription" name="serviceDescription" rows="4" maxlength="900" required></textarea>
-                    <small class="char-counter"><span id="charCount">0</span>/900 caracteres</small>
                 </div>
-                <div class="d-flex justify-content-around flex-wrap">
-                    <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-12 col-md-6">
                         <label for="serviceImages">Imagens</label>
                         <input type="file" class="form-control-file" id="serviceImages" name="serviceImages[]" multiple accept="image/*" onchange="previewImages()">
                         <div id="imagePreview" class="preview d-flex flex-wrap"></div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-12 col-md-6">
                         <label for="serviceVideos">Vídeos</label>
-                        <input type="file" class="form-control-file" id="serviceVideos" name="serviceVideos[]" multiple accept="video/*">
+                        <input type="file" class="form-control-file" id="serviceVideos" name="serviceVideos[]" multiple accept="video/*" onchange="previewVideos()">
+                        <div id="videoPreview" class="preview d-flex flex-wrap"></div>
                     </div>
                 </div>
                 <div class="text-center py-3">
@@ -101,6 +103,48 @@
 
     <?php include '../../padroes/footer.php'; ?>
 
+    <script>
+        function previewImages() {
+            var preview = document.getElementById("imagePreview");
+            preview.innerHTML = "";
+            var files = document.getElementById("serviceImages").files;
+
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    var img = document.createElement("img");
+                    img.src = e.target.result;
+                    img.classList.add("m-2");
+                    preview.appendChild(img);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function previewVideos() {
+            var preview = document.getElementById("videoPreview");
+            preview.innerHTML = "";
+            var files = document.getElementById("serviceVideos").files;
+
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    var video = document.createElement("video");
+                    video.src = e.target.result;
+                    video.classList.add("m-2");
+                    video.controls = true;
+                    preview.appendChild(video);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
     <script src="../projAxeySenai/assets/JS/global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
