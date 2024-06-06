@@ -2,7 +2,6 @@
 <style> 
  .bg-footer {
             background-color: #012640;
-            
         }
 </style>
 <footer class="bg-footer text-white mt-5">
