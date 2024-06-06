@@ -287,7 +287,9 @@
                 <div class="card-body">
                     <h5 class="card-title">Serviço 1</h5>
                     <p class="card-text">Descrição breve do Serviço 1.</p>
+
                     <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+
                 </div>
             </div>
             <div class="card">
