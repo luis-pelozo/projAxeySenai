@@ -52,7 +52,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-8">
                         <label for="serviceName">Titulo</label>
-                        <input type="text" class="form-control" id="serviceName" name="serviceName" required>
+                        <input type="text" class="form-control" id="serviceName" name="serviceName" required placeholder="digite o titulo do produto / serviço">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="serviceCategory">Seguimento</label>
