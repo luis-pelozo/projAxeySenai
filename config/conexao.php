@@ -1,6 +1,6 @@
 <?
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *'); // habilitar CORS a conexao - util pra validação dos numeros
+header('Access-Control-Allow-Origin: *'); // habilitar CORS a conexao - util pra função para usar os numeros de tel de maneira dinamica 
 
 $servername = "";
 $username = "";
