@@ -37,6 +37,9 @@
 .rate:not(:checked) > label:hover ~ label {
   color: #deb217;  
 }
+.body{
+  background-color: #c59b08;
+}
 
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
@@ -92,5 +95,35 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+
+.services {
+  margin: 20px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.services::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.services .card {
+  flex: 0 0 auto;
+  width: calc(100% / 5);
+}
+
+.services .card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card {
+  margin-left: 20px;
+}
+
 
 
