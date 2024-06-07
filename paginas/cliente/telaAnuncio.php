@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Axey</title>
 </head>
+<style>
+    .carousel-item img {
+        max-height: 50%;
+        /* ajuste conforme necessário */
+    }
+
+    /* Ajustes de layout para dispositivos móveis */
+    @media (max-width: 768px) {
+        .anuncipo .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-group-func {
+            margin-top: 20px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
+
 <body>
     <?php include '../../padroes/nav.php'; ?>
 
@@ -96,4 +121,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>

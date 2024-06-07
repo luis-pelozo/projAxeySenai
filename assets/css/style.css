@@ -92,21 +92,3 @@ body {
   align-items: center;
 }
 
-.carousel-item img {
-  max-height: 50%; /* ajuste conforme necessário */ 
-}
-
-/* Ajustes de layout para dispositivos móveis */
-@media (max-width: 768px) {
-  .anuncipo .container {
-      flex-direction: column;
-      align-items: center;
-  }
-  .main-group-func {
-      margin-top: 20px;
-  }
-  .carousel-inner img {
-      width: 100%;
-      height: auto;
-  }
-}
