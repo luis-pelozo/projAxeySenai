@@ -1,5 +1,6 @@
 <?php
     include '../../padroes/head.php';
+    
 ?>
     <body>
         <div class="container-fluid">
@@ -7,30 +8,36 @@
                 <img src="../../assets/imgs/logoAxey.png" class="card-img-top" alt="Imagem de Login">
                 <input type="text" class="form-control form-control-sm" style="border-radius: 8px" placeholder="Usuário">
                 <input type="password" class="form-control form-control-sm" style="border-radius: 8px" placeholder="Senha">
-                <button type="submit" id="entrarBtn" href="index.html" class="btn btn-primary btn-sm btn-block" style="color: white; border: none; background-color: #1A3C53; border-radius: 8px">Entrar</button>
-                
+
+                <button type="submit" id="entrarBtn" onclick="window.location.href='../../index.php'" class="btn btn-primary btn-sm btn-block" style="color: white; border: none; background-color: #1A3C53; border-radius: 8px">Entrar</button>
+    
                 <a href="#" class="btnEsqueciSenha btn-sm" data-toggle="modal" data-target="#esqueciSenhaModal" style="color: #00376B;">Esqueci minha senha</a>
 
                 <div class="modal fade" id="esqueciSenhaModal" tabindex="-1" role="dialog" aria-labelledby="esqueciSenhaModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="esqueciSenhaModalLabel">Recuperar Senha</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
+
                             <div class="modal-body">
                                 <form>
                                     <div class="form-group">
-                                        <label for="email">Informe o e-mail cadastrado para receber resetar sua senha</label>
-                                        <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com">
+                                        <label for="cpfRecuperaSenha">Informe o CPF cadastrado</label>
+                                        <input type="number" class="form-control" id="cpfRecuperaSenha" placeholder="000.000.000-00">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="nascimentoRecuperaSenha">Informe a data de Nascimento</label>
+                                        <input type="date" class="form-control" id="nascimentoRecuperaSenha">
+
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer esqueciSenhaModalFooter">
                             
-                                <button type="button" class="btn btn-primary" style="background-color: #1A3C53; border: none">Resetar Senha</button>
+
+
+                                <button type="button" class="btn btn-primary" style="background-color: #1A3C53; border: none">Recuperar Senha</button>
+
+
                             </div>
                         </div>
                     </div>

@@ -70,7 +70,9 @@
         .rate {
             display: flex;
             justify-content: center;
+            flex-direction: row-reverse;
             margin-bottom: 20px;
+            
         }
 
         .rate input[type="radio"] {
@@ -216,13 +218,10 @@
 </head>
 
 <body>
-
-
- 
-    <!-- Inicio do Nav -->
     <?php
     include '../../padroes/nav.php';
     ?>
+    <!-- Inicio do Nav -->
     <!-- Final do Nav -->
 
     <!-- Inicio Corpo de Pagina -->

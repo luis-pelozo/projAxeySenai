@@ -7,7 +7,7 @@
     <title>Perfil Do Prestador</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <style>
         * {
             margin: 0;
@@ -71,6 +71,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
+            flex-direction: row-reverse;
         }
 
         .rate input[type="radio"] {
@@ -258,12 +259,12 @@
                 <div class="col-sm-12" style="align-items: center">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendarModal" style="background-color: #0711FF; border: none; width: 100%;">
-                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i>Verificar Diponibilidade </button>
+                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i> Verificar Diponibilidade </button>
                 </div>
                 <!-- Final Botão agenda -->
                 <!-- Botão Whats -->
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-success mt-2"  id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
+                    <button type="button" class="btn btn-success mt-2" id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i> Entre em Contato</button>
                 </div>
                 <!-- Final Botão Whats -->
                 <!-- Final Botões -->
@@ -391,80 +392,30 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
 
-    <?php 
+    <?php
     include '../../padroes/footer.php';
     ?>
 
+    <script>
+        document
+            .getElementById("whatsappButton")
+            .addEventListener("click", function() {
+                const phoneNumber = "554788671192"; // Número de telefone com código do país (55 para Brasil)
+                const message = encodeURIComponent("Olá, gostaria de mais informações."); // Mensagem opcional
+                const url = `https://wa.me/${phoneNumber}?text=${message}`;
+                window.open(url, "_blank");
+            });
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="../projAxeySenai/assets/js/modal_calendario.js"></script>
-    <script src="../projAxeySenai/assets/js/whats_link.js"></script>
-    
-    
-    <script> 
-    
-document.addEventListener('DOMContentLoaded', () => {
-    const prevMonth = document.getElementById('prevMonth');
-    const nextMonth = document.getElementById('nextMonth');
-    const monthYear = document.getElementById('monthYear');
-    const datesContainer = document.getElementById('dates');
-
-    let currentDate = new Date();
-
-    prevMonth.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
-    });
-
-    nextMonth.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-    });
-
-    function renderCalendar() {
-        const month = currentDate.getMonth();
-        const year = currentDate.getFullYear();
-        monthYear.textContent = `${new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(currentDate)} ${year}`;
-
-        const firstDayOfMonth = new Date(year, month, 1).getDay();
-        const lastDateOfMonth = new Date(year, month + 1, 0).getDate();
-        const lastDayOfLastMonth = new Date(year, month, 0).getDate();
-
-        datesContainer.innerHTML = '';
-
-        for (let i = firstDayOfMonth; i > 0; i--) {
-            const dateElement = document.createElement('div');
-            dateElement.className = 'calendar-date text-muted';
-            dateElement.textContent = lastDayOfLastMonth - i + 1;
-            datesContainer.appendChild(dateElement);
-        }
-
-        for (let i = 1; i <= lastDateOfMonth; i++) {
-            const dateElement = document.createElement('div');
-            dateElement.className = 'calendar-date';
-            dateElement.textContent = i;
-            datesContainer.appendChild(dateElement);
-        }
-    }
-
-    renderCalendar();
-});
-
-
-document.getElementById('whatsappButton').addEventListener('click', function() {
-    const phoneNumber = '5547996522605'; // Número de telefone com código do país (55 para Brasil)
-    const message = encodeURIComponent('Olá, gostaria de mais informações.'); // Mensagem opcional
-    const url = `https://wa.me/${phoneNumber}?text=${message}`; 
-    window.open(url, '_blank');
-  });
-</script>
+    <script src="../projAxeySenai/assets/global.js"></script>
 </body>
 
 </html>

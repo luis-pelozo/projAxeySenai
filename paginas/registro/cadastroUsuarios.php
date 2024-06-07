@@ -63,7 +63,7 @@
           <h3>Crie sua conta. É grátis!</h3>
         </div>
         <div class="card-body">
-          <form>
+          <form id="iCadastroUsuarios">
             <div class="form-group">
               <label for="nome">Seu Nome *</label>
               <input type="text" class="form-control" id="nome" placeholder="Ex: João Antonio da Silva" required>
@@ -120,9 +120,6 @@
               </div>
             </div>
 
-
-
-
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="celular">Celular *</label>
@@ -159,7 +156,7 @@
 
               <div class="form-group col-md-3">
                 <label for="numero">Número *</label>
-                <input type="text" class="form-control numero-menor" id="numero" required>
+                <input type="text" class="form-control numero-menor" id="iNumero" name="nNumero" required>
               </div>
             </div>
 
@@ -194,7 +191,7 @@
 
 
             <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary" style="background-color: #1A3C53; border: none;" onclick="return validar()">Cadastre-se</button>
+              <button type="submit" class="btn btn-primary" style="background-color: #1A3C53; border: none;" onclick="return validar()">Cadastre-se</button>
             </div>
             <div class="d-flex justify-content-center mt-2">
               <span>Já tem uma conta? </span>
@@ -232,40 +229,40 @@
     </div>
   </div>
 
-  <?php 
-    include '../../padroes/footer.php';
-    ?>
-  
+  <?php
+  include '../../padroes/footer.php';
+  ?>
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> 
 
   <script>
-function validar() {
- 
-  var nome = document.getElementById("nome").value;
-  var regex = /^\S{2,}\s+\S+/; // Pelo menos duas palavras com um espaço entre elas
-  if (!regex.test(nome)) {
-    alert("O nome deve conter pelo menos duas palavras, sendo a primeira com pelo menos dois caracteres e um espaço entre elas.");
-    return false;
-  }
-  var senha = document.getElementById("senha").value;
-  var repetirSenha = document.getElementById("cofirma-senha").value;
+    function validar() {
 
-  // Verifica se a senha tem pelo menos 6 caracteres
-  if (senha.length < 6) {
-    alert("A senha deve ter pelo menos 6 caracteres.");
-    return false;
-  }
+      var nome = document.getElementById("nome").value;
+      var regex = /^\S{2,}\s+\S+/; // Pelo menos duas palavras com um espaço entre elas
+      if (!regex.test(nome)) {
+        alert("O nome deve conter pelo menos duas palavras, sendo a primeira com pelo menos dois caracteres e um espaço entre elas.");
+        return false;
+      }
+      var senha = document.getElementById("senha").value;
+      var repetirSenha = document.getElementById("senha_repetida").value;
 
-  // Verifica se a senha e a repetição da senha são iguais
-  if (senha !== repetirSenha) {
-    alert("As senhas não coincidem. Por favor, verifique.");
-    return false;
-  }
-  return true;
-}
+      // Verifica se a senha tem pelo menos 6 caracteres
+      if (senha.length < 6) {
+        alert("A senha deve ter pelo menos 6 caracteres.");
+        return false;
+      }
+
+      // Verifica se a senha e a repetição da senha são iguais
+      if (senha !== repetirSenha) {
+        alert("As senhas não coincidem. Por favor, verifique.");
+        return false;
+      }
+      return true;
+    }
 
 
     $(document).ready(function() {
@@ -294,6 +291,12 @@ function validar() {
         }
 
       });
+
+      $('#iCadastroUsuarios').on('submit', function(e) {
+        const formData = new FormData(this)
+
+
+      });
     });
 
     $('#cnpj').mask('00.000.000/0000-00');
@@ -303,43 +306,40 @@ function validar() {
     $('#cep').mask('00000-000');
 
     function buscarCep() {
-  var cep = $('#cep').val().replace(/\D/g, ''); // Remove caracteres não numéricos
-  if (cep.length != 8) {
-    alert('CEP inválido. Por favor, digite um CEP válido.');
-    return;
-  }
+      var cep = $('#cep').val().replace(/\D/g, ''); // Remove caracteres não numéricos
+      if (cep.length != 8) {
+        alert('CEP inválido. Por favor, digite um CEP válido.');
+        return;
+      }
 
-  $.ajax({
-    url: 'https://viacep.com.br/ws/' + cep + '/json/',
-    dataType: 'json',
-    success: function(data) {
-      if (!data.erro) {
-        $('#endereco').val(data.logradouro);
-        $('#bairro').val(data.bairro);
-        $('#cidade').val(data.localidade);
-        $('#estado').val(data.uf);
-        $('#numero').focus(); // Mova o foco para o campo de número após preencher o endereço
-      } else {
-        alert('CEP não encontrado. Por favor, verifique o CEP digitado.');
-      }
-    },
-    error: function() {
-      if ($('#cep').val().length == 8) {
-        alert('Erro ao buscar o CEP. Por favor, tente novamente.');
-      }
+      $.ajax({
+        url: 'https://viacep.com.br/ws/' + cep + '/json/',
+        dataType: 'json',
+        success: function(data) {
+          if (!data.erro) {
+            $('#endereco').val(data.logradouro);
+            $('#bairro').val(data.bairro);
+            $('#cidade').val(data.localidade);
+            $('#estado').val(data.uf);
+            $('#numero').focus(); // Mova o foco para o campo de número após preencher o endereço
+          } else {
+            alert('CEP não encontrado. Por favor, verifique o CEP digitado.');
+          }
+        },
+        error: function() {
+          if ($('#cep').val().length == 8) {
+            alert('Erro ao buscar o CEP. Por favor, tente novamente.');
+          }
+        }
+      });
     }
-  });
-}
 
-$('#cep').on('blur', buscarCep);
-$('#cep').on('keypress', function(event) {
-  if (event.which === 13) { // Se a tecla Enter for pressionada
-    buscarCep();
-  }
-});
-
-   
- 
+    $('#cep').on('blur', buscarCep);
+    $('#cep').on('keypress', function(event) {
+      if (event.which === 13) { // Se a tecla Enter for pressionada
+        buscarCep();
+      }
+    });
   </script>
 
 

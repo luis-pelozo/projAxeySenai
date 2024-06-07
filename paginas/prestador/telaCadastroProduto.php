@@ -23,13 +23,15 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 50px;
+            width: 100%;
         }
 
         .form-container h1 {
             color: #1B3C54;
         }
 
-        .preview img {
+        .preview img,
+        .preview video {
             max-width: 100px;
             margin-top: 10px;
         }
@@ -43,9 +45,8 @@
 
 <body>
 
-<?php 
-    include '../../padroes/nav.php';
-    ?>
+    <?php include '../../padroes/nav.php'; ?>
+
     <div class="container d-flex justify-content-center">
         <div class="form-container col-12 col-md-10 col-lg-8">
             <h1 class="text-center py-2">Cadastro de Serviço / Produto</h1>
@@ -53,7 +54,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-8">
                         <label for="serviceName">Titulo</label>
-                        <input type="text" class="form-control" id="serviceName" name="serviceName" required>
+                        <input type="text" class="form-control" id="serviceName" name="serviceName" required placeholder="digite o titulo do produto / serviço">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="serviceCategory">Seguimento</label>
@@ -70,27 +71,27 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="serviceDuration">Duração (horas / dias)</label>
-                        <input type="number" class="form-control" id="serviceDuration" name="serviceDuration" step="0.1" required>
+                        <input type="number" class="form-control" id="serviceDuration" name="serviceDuration" step="0.1" required placeholder="1">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="servicePrice">Valor</label>
-                        <input type="text" class="form-control" id="servicePrice" name="servicePrice" maxlength="42" required>
+                        <input type="number" class="form-control servicePrice" name="servicePrice" required placeholder="0,00 R$">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="serviceDescription">Descrição</label>
                     <textarea class="form-control" id="serviceDescription" name="serviceDescription" rows="4" maxlength="900" required></textarea>
-                    <small class="char-counter"><span id="charCount">0</span>/900 caracteres</small>
                 </div>
-                <div class="d-flex justify-content-around">
-                    <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-12 col-md-6">
                         <label for="serviceImages">Imagens</label>
                         <input type="file" class="form-control-file" id="serviceImages" name="serviceImages[]" multiple accept="image/*" onchange="previewImages()">
                         <div id="imagePreview" class="preview d-flex flex-wrap"></div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-12 col-md-6">
                         <label for="serviceVideos">Vídeos</label>
-                        <input type="file" class="form-control-file" id="serviceVideos" name="serviceVideos[]" multiple accept="video/*">
+                        <input type="file" class="form-control-file" id="serviceVideos" name="serviceVideos[]" multiple accept="video/*" onchange="previewVideos()">
+                        <div id="videoPreview" class="preview d-flex flex-wrap"></div>
                     </div>
                 </div>
                 <div class="text-center py-3">
@@ -100,41 +101,51 @@
         </div>
     </div>
 
-    <?php 
-    include '../../padroes/footer.php';
-    ?>
+    <?php include '../../padroes/footer.php'; ?>
 
     <script>
-        $(document).ready(function(){
-            $('#servicePrice').mask('#.##0,00', {reverse: true});
-
-            $('#serviceDescription').keyup(function() {
-                var charCount = $(this).val().length;
-                $('#charCount').text(charCount);
-            });
-        });
-
         function previewImages() {
-            var preview = document.getElementById('imagePreview');
-            preview.innerHTML = '';
-            var files = document.getElementById('serviceImages').files;
+            var preview = document.getElementById("imagePreview");
+            preview.innerHTML = "";
+            var files = document.getElementById("serviceImages").files;
 
             for (var i = 0; i < files.length; i++) {
                 var file = files[i];
                 var reader = new FileReader();
 
-                reader.onload = (function(e) {
-                    var img = document.createElement('img');
+                reader.onload = function(e) {
+                    var img = document.createElement("img");
                     img.src = e.target.result;
-                    img.classList.add('m-2');
+                    img.classList.add("m-2");
                     preview.appendChild(img);
-                });
+                };
+
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function previewVideos() {
+            var preview = document.getElementById("videoPreview");
+            preview.innerHTML = "";
+            var files = document.getElementById("serviceVideos").files;
+
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    var video = document.createElement("video");
+                    video.src = e.target.result;
+                    video.classList.add("m-2");
+                    video.controls = true;
+                    preview.appendChild(video);
+                };
 
                 reader.readAsDataURL(file);
             }
         }
     </script>
-
+    <script src="../projAxeySenai/assets/JS/global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
