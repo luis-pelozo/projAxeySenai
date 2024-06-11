@@ -39,8 +39,10 @@
     <?php include '../../padroes/nav.php'; ?>
 
     <section class="anuncipo mx-5 py-5">
+
         <div class="main container d-flex flex-column flex-md-row">
             <div id="separa-divs">
+
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner rounded-4">
                         <div class="carousel-item active">
@@ -63,59 +65,78 @@
                     </button>
                 </div>
             </div>
+
             <div class="main-group-func container flex-wrap object-fit d-flex align-self-center">
                 <div class="icon img-fluid container altera-img">
                     <img src="../../assets/imgs/user.png" alt="" class="rounded-circle">
+
                 </div>
-                <div class="legenda container text-center">
+                <div class="legenda container text-center mb-3">
                     <p>illum quae eligendi unde ipsa reiciendis dolor assumenda voluptates recusandae animi nesciunt earum laboriosam.</p>
                 </div>
-                <div class="buttom-gourp d-flex flex-column container">
-                    <a type="submit" class="btn btn-success"><span></span>Entre em contato</a>
-                    <div class="group-buttom d-flex flex-column py-2">
-                        <a type="submit" class="btn btn-primary">Verificar disponibilidade</a>
-                    </div>
+                <div class="buttom-gourp d-flex flex-column container text-center">
+                    <a type="submit" class="btn btn-success mb-2">Entre em contato</a>
+                    <a type="submit" class="btn btn-primary">Verificar disponibilidade</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="serviços-semelhantes">
-        <div class="container">
-            <h3>Serviços Semelhantes</h3>
-            <div class="d-flex">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="services text-center">
+        <h1>Serviços em destaque</h1>
+    </div>
+    <div class="container-fluid categories">
+    <div class="services mt-4 mx-0">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 1</h5>
+                    <p class="card-text">Descrição breve do Serviço 1.</p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 2</h5>
+                    <p class="card-text">Descrição breve do Serviço 2.</p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 3</h5>
+                    <p class="card-text">Descrição breve do Serviço 3.</p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 4</h5>
+                    <p class="card-text">Descrição breve do Serviço 4.</p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 5</h5>
+                    <p class="card-text">Descrição breve do Serviço 5.</p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 6</h5>
+                    <p class="card-text">Descrição breve do Serviço 6.</p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <?php include '../../padroes/footer.php'; ?>
 
