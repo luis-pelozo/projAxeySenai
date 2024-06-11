@@ -86,7 +86,58 @@
         <div class="services">
             <h1>Serviços em destaque</h1>
         </div>
-       
+        <div class="services mt-4 mx-0">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 1</h5>
+                    <p class="card-text">Descrição breve do Serviço 1.</p>
+
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 2</h5>
+                    <p class="card-text">Descrição breve do Serviço 2.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 3</h5>
+                    <p class="card-text">Descrição breve do Serviço 3.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 4</h5>
+                    <p class="card-text">Descrição breve do Serviço 4.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 5</h5>
+                    <p class="card-text">Descrição breve do Serviço 5.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 6</h5>
+                    <p class="card-text">Descrição breve do Serviço 6.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+        </div>
         <div class="services">
             <h1>Serviços mais visitados</h1>
         </div>
