@@ -53,7 +53,7 @@
                     <p>illum quae eligendi unde ipsa reiciendis dolor assumenda voluptates recusandae animi nesciunt earum laboriosam.</p>
                 </div>
                 <div class="buttom-gourp d-flex flex-column container">
-                    <a type="submit" class="btn btn-success"><span></span>Entre em contato</a>
+                    <a href="../prestador/TelaPerfilPrestador.php" type="submit" class="btn btn-success"><span></span>Entre em contato</a>
                     <div class="group-buttom d-flex flex-column py-2">
                         <a type="submit" class="btn btn-primary">Verificar disponibilidade</a>
                     </div>

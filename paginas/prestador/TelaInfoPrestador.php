@@ -259,13 +259,13 @@
                 <div class="col-sm-12" style="align-items: center">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendarModal" style="background-color: #0711FF; border: none; width: 100%;">
-                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i>Verificar Diponibilidade </button>
+                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i>Informar Diponibilidade </button>
                 </div>
                 <!-- Final Botão agenda -->
                 <!-- Botão Whats -->
-                <div class="col-sm-12">
-                    <button type="button" class="btn btn-success mt-2" id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
-                </div>
+                <!-- <div class="col-sm-12">
+                    <button type="button" class="btn btn-success mt-2" id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i Contato</button>
+                </div> -->
                 <!-- Final Botão Whats -->
                 <!-- Final Botões -->
             </div>
@@ -323,7 +323,9 @@
 
                         </div>
                 </div>
-                <button type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
+                <button  type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
+
+                <button id="btnCadastroProduto" type="button" class="btn btn-primary" style="background-color: #012640; color:white">Novo</button>
                 </form>
 
             </div>
@@ -389,6 +391,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="../projAxeySenai/assets/js/modal_calendario.js"></script>
     <script src="../projAxeySenai/assets/js/whats_link.js"></script>
+
+    <script>
+    // Adiciona um evento de clique ao botão
+    document.getElementById("btnCadastroProduto").addEventListener("click", function() {
+      // Redireciona para telaCadastroProduto.php
+      window.location.href = "telaCadastroProduto.php";
+    });
+  </script>
 </body>
 
 </html>
