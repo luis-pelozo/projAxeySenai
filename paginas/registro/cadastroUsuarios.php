@@ -1,65 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro Pessoa Juridica</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .logo {
-      max-width: 28vh;
-      height: auto;
-    }
-
-    .geral {
-      padding: 2%;
-    }
-
-    .centraliza {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .divide {
-      margin-top: 4%;
-    }
-
-    .btn-selectable {
-      border: 1px solid #012640;
-      border-radius: 5px;
-      padding: 10px 20px;
-      margin: 10px;
-      cursor: pointer;
-    }
-
-    .btn-selectable.active {
-      background-color: #012640;
-      color: white;
-    }
-
-    textarea {
-      resize: none;
-      min-height: 15vh;
-    }
-
-    .row {
-      margin: 0;
-    }
-  </style>
-</head>
+<?php
+include '../../padroes/head.php';
+?>
 
 <body>
 
 
-  <div class="row justify-content-center geral">
-    <div class="col-md-6">
+  <div class="row justify-content-center ajustaTela">
+    <div class="col-md-6 ">
       <div class="card">
         <div class="card-header text-center">
-          <img src="../../assets/imgs/logoPronta.png" alt="Logo da Axey" class="logo">
+          <img src="../../assets/imgs/logoPronta.png" alt="Logo da Axey" class="logoCadastro">
           <h3>Crie sua conta. É grátis!</h3>
         </div>
         <div class="card-body">
@@ -86,10 +39,15 @@
               <input type="text" class="form-control" id="nomeSocial" placeholder="" required>
             </div>
 
-
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" class="form-control" id="email" placeholder="Ex: joaoantonio@gmail.com" required>
+            <div class="form-row">
+              <div class="form-group col-md-7">
+                <label for="email">Email *</label>
+                <input type="email" class="form-control" id="email" placeholder="Ex: joaoantonio@gmail.com" required>
+              </div>
+              <div class="form-group col-md-5">
+                <label for="dataNascimento">Data de Nascimento *</label>
+                <input type="date" class="form-control text-center" id="dataNascimento" placeholder="dd/mm/aaaa" required>
+              </div>
             </div>
 
 
@@ -116,7 +74,7 @@
             <div id="descricaoFields" style="display: none;">
               <div class="form-group">
                 <label for="descricao">Descrição do Negócio *</label>
-                <textarea class="form-control" id="descricao" required></textarea>
+                <textarea class="form-control descricaoNegocio" id="descricao" required></textarea>
               </div>
             </div>
 
@@ -206,11 +164,11 @@
   <div class="modal fade" id="confirmaUser" tabindex="-1" aria-labelledby="confirmaUser">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-body centraliza">
-          <img src="../../assets/imgs/imgLogin.png" alt="Img Login" class="logo">
-          <h3 class="divide">Vamos Começar?</h3>
-          <div class="btn-selectable selecionado" id="btnCompra">Quero comprar ou contratar</div>
-          <div class="btn-selectable selecionado" id="btnVende">Quero vender ou prestar serviços</div>
+        <div class="modal-body modalCadastro">
+          <img src="../../assets/imgs/imgLogin.png" alt="Img Login" class="logoCadastro">
+          <h3 class="divideTipoCadastro">Vamos Começar?</h3>
+          <div class="btn-selectable selecionado btnTipoCadastro" id="btnCompra">Quero comprar ou contratar</div>
+          <div class="btn-selectable selecionado btnTipoCadastro" id="btnVende">Quero vender ou prestar serviços</div>
         </div>
       </div>
     </div>
@@ -219,11 +177,11 @@
   <div class="modal fade" id="confirmaPessoa" tabindex="-1" aria-labelledby="confirmaPessoa">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-body centraliza">
-          <img src="../../assets/imgs/imgLogin.png" alt="Img Login" class="logo">
-          <h3 class="divide">Você é?</h3>
-          <div class="btn-selectable selecionado2" id="btnJuridica">Pessoa Juridica<span class="texto"> (Possuo CNPJ)</span></div>
-          <div class="btn-selectable selecionado2" id="btnFisica">Pessoa Fisica <span class="texto">(Não possuo CNPJ)</span></div>
+        <div class="modal-body modalCadastro">
+          <img src="../../assets/imgs/imgLogin.png" alt="Img Login" class="logoCadastro">
+          <h3 class="divideTipoCadastro">Você é?</h3>
+          <div class="btn-selectable selecionado2 btnTipoCadastro" id="btnJuridica">Pessoa Juridica<span class="texto"> (Possuo CNPJ)</span></div>
+          <div class="btn-selectable selecionado2 btnTipoCadastro" id="btnFisica">Pessoa Fisica <span class="texto">(Não possuo CNPJ)</span></div>
         </div>
       </div>
     </div>
@@ -236,7 +194,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
   <script>
     function validar() {

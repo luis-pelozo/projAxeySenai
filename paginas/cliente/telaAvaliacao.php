@@ -29,6 +29,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
+            flex-direction: row-reverse;
         }
 
         .rate input[type="radio"] {
