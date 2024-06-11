@@ -74,9 +74,13 @@
                 <div class="legenda container text-center mb-3">
                     <p>illum quae eligendi unde ipsa reiciendis dolor assumenda voluptates recusandae animi nesciunt earum laboriosam.</p>
                 </div>
+
                 <div class="buttom-gourp d-flex flex-column container text-center">
-                    <a type="submit" class="btn btn-success mb-2">Entre em contato</a>
-                    <a type="submit" class="btn btn-primary">Verificar disponibilidade</a>
+                    <a href="../prestador/TelaPerfilPrestador.php" type="submit" class="btn btn-success"><span></span>Entre em contato</a>
+                    <div class="group-buttom d-flex flex-column py-2">
+                        <a type="submit" class="btn btn-primary">Verificar disponibilidade</a>
+                    </div>
+
                 </div>
             </div>
         </div>
