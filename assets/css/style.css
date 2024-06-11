@@ -49,6 +49,13 @@
   color: #c59b08;
 }
 
+/* ****************************************************************************************************************************
+
+ INICIO FELISBINO    INICIO FELISBINO    INICIO FELISBINO    INICIO FELISBINO    INICIO FELISBINO    INICIO FELISBINO        
+
+   ****************************************************************************************************************************
+
+*/
 
 .container-fluid {
   display: flex;
@@ -125,5 +132,67 @@ body {
   margin-left: 20px;
 }
 
+/* ****************************************************************************************************************************
+
+ FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO        
+
+   ****************************************************************************************************************************
+
+*/
 
 
+/* ****************************************************************************************************************************
+
+ INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    
+
+   ****************************************************************************************************************************
+
+*/
+
+.logoCadastro {
+  max-width: 28vh;
+  height: auto;
+}
+
+.modalCadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.divideTipoCadastro {
+  margin-top: 4%;
+}
+
+.btnTipoCadastro {
+  border: 1px solid #012640;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btnTipoCadastro.active {
+  background-color: #012640;
+  color: white;
+}
+
+.descricaoNegocio {
+  resize: none;
+  min-height: 15vh;
+}
+
+.ajustaTela {
+  margin: 0;
+  margin-top: 2%
+}
+
+/* ********************************************************************************************************************
+
+        FIM AFFONSO     FIM AFFONSO     FIM AFFONSO     FIM AFFONSO     FIM AFFONSO     FIM AFFONSO     FIM AFFONSO 
+
+
+***********************************************************************************************************************
+*/
