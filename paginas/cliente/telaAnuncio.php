@@ -9,19 +9,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Axey</title>
 </head>
+<style>
+    .carousel-item img {
+        max-height: 50%;
+        /* ajuste conforme necessário */
+    }
+
+    /* Ajustes de layout para dispositivos móveis */
+    @media (max-width: 768px) {
+        .anuncipo .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-group-func {
+            margin-top: 20px;
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
 
 <body>
-
-    <?php
-    include '../../padroes/nav.php';
-    ?>
+    <?php include '../../padroes/nav.php'; ?>
 
     <section class="anuncipo mx-5 py-5">
-        <div class="main container d-flex flex-wrap">
-            <div id="separa-divs" class="col-md-8 mb-4">
+
+        <div class="main container d-flex flex-column flex-md-row">
+            <div id="separa-divs">
+
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner rounded-4">
                         <div class="carousel-item active">
@@ -44,9 +65,11 @@
                     </button>
                 </div>
             </div>
-            <div class="main-group-func container flex-wrap d-flex align-self-center col-md-4">
-                <div class="icon img-fluid container altera-img text-center mb-3">
-                    <img src="../../assets/img/icones_usuario/854888-200.png" alt="" class="rounded-circle">
+
+            <div class="main-group-func container flex-wrap object-fit d-flex align-self-center">
+                <div class="icon img-fluid container altera-img">
+                    <img src="../../assets/imgs/user.png" alt="" class="rounded-circle">
+
                 </div>
                 <div class="legenda container text-center mb-3">
                     <p>illum quae eligendi unde ipsa reiciendis dolor assumenda voluptates recusandae animi nesciunt earum laboriosam.</p>
@@ -115,11 +138,9 @@
         </div>
     </div>
 
-    <?php
-    include '../../padroes/footer.php';
-    ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <?php include '../../padroes/footer.php'; ?>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
