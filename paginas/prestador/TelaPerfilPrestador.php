@@ -218,6 +218,9 @@
 
 <body>
 
+    <?php
+    include '../../padroes/nav.php';
+    ?>
     <!-- Inicio do Nav -->
     <!-- Final do Nav -->
 
