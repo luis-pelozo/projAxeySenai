@@ -105,7 +105,7 @@
 </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-nav">
    <a class="navbar-brand" href="/projAxeySenai/index.php">
-   <img class="logo" src="../../assets/imgs/logo.png" alt="Minha Logo">
+   <img class="logo" src="/projAxeySenai/assets/imgs/logo.png" alt="Minha Logo">
    </a>
    <div class="d-flex flex-grow-1 align-items-center">
       <div class="search-container">

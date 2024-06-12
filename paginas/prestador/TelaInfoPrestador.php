@@ -325,7 +325,7 @@
                 </div>
                 <button  type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
 
-                <button id="btnCadastroProduto" type="button" class="btn btn-primary" style="background-color: #012640; color:white">Novo</button>
+                <button id="btnCadastroProduto" type="button" class="btn btn-primary" style="background-color: #012640; color:white">Novo Serviço</button>
                 </form>
 
             </div>
