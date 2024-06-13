@@ -218,6 +218,9 @@
 
 <body>
 
+    <?php
+    include '../../padroes/nav.php';
+    ?>
     <!-- Inicio do Nav -->
     <?php
     include '../../padroes/nav.php';
@@ -249,7 +252,7 @@
                         <label for="star3" title="3 estrelas">★</label>
                         <input type="radio" id="star2" name="rate" value="2" />
                         <label for="star2" title="2 estrelas">★</label>
-                        <input type="radio" id="star1" name="rate" value="1" />
+                        <input onclick="window.location.href='../cliente/telaAvaliacao.php'" type="radio" id="star1" name="rate" value="1" />
                         <label for="star1" title="1 estrela">★</label>
                     </div>
                 </div>
@@ -274,7 +277,7 @@
             <div class="col-sm-4 mt-2">
                 <!-- Nome Prestador -->
                 <div class="col-sm-12 mt-2" style="padding-left: 0;">
-                    <h3 class="text-left mt-12">Nome Prestador<img width="10%" height="10%" src="https://img.icons8.com/color/48/verified-badge.png" alt="verified-badge" /></h3>
+                    <h3 onclick="window.location.href='TelaInfoPrestador.php'" class="text-left mt-12">Nome Prestador<img width="10%" height="10%" src="https://img.icons8.com/color/48/verified-badge.png" alt="verified-badge" /></h3>
                 </div>
                 <!-- Final Nome Prestador -->
                 <!-- Cidade / Area de Atuação -->
@@ -310,7 +313,7 @@
                         <h3 class="text-center mt-6" style="background-color:#1B3C54 ; color:white">84 Serviços Prestados</h3>
                     </div>
                     <div class="col-sm-12">
-                        <h6 class="text-center mt-6">74 Voltariam a contratar seus servilos</h6>
+                        <h6 class="text-center mt-6">74 Voltariam a contratar seus serviços</h6>
                     </div>
                     <div class="col-sm-12">
                         <h3 class="text-center mt-12">Avaliações</h3>

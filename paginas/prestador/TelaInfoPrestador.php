@@ -155,6 +155,7 @@
                 <!-- Botão Agenda -->
                 <div class="col-sm-12 area-botao">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
+
                     <button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#calendarModal">
                         <i class="fa-regular fa-calendar icone-botao-calendario"></i>Verificar Diponibilidade </button>
                 </div>
@@ -163,6 +164,7 @@
                 <div class="col-sm-12 area-botao">
                     <button type="button" class="btn btn-success mt-2 botao-verde" id="whatsappButton" ><i class="fa-brands fa-whatsapp icone-whats"></i>Entre em Contato</button>
                 </div>
+
                 <!-- Final Botão Whats -->
                 <!-- Final Botões -->
             </div>
@@ -230,7 +232,11 @@
 
                         </div>
                 </div>
-                <button type="submit" class="btn btn-primary" style="background-color: #012640; color:white " onclick="return validar()">Salvar</button>
+
+                <button  type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
+
+                <button id="btnCadastroProduto" type="button" class="btn btn-primary" style="background-color: #012640; color:white">Novo Serviço</button>
+
                 </form>
 
             </div>
@@ -352,9 +358,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
     <script src="../../assets/js/modal_calendario.js"></script>
     <script src="../../assets/js/whats_link.js"></script>
     <script src="../../assets/js/valida_informacoes.js"></script>
+ 
+    <script>
+    // Adiciona um evento de clique ao botão
+    document.getElementById("btnCadastroProduto").addEventListener("click", function() {
+      // Redireciona para telaCadastroProduto.php
+      window.location.href = "telaCadastroProduto.php";
+    });
+  </script>
 
 </body>
 

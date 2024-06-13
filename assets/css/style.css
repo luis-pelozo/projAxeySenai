@@ -45,6 +45,9 @@ textarea {
   cursor: pointer;
   transition: color 0.3s;
 }
+.body{
+  background-color: #c59b08;
+}
 
 .rate input[type="radio"]:checked~label,
 .rate label:hover,
@@ -55,6 +58,16 @@ textarea {
 /* Final Parte Avaliação Estrelas */
 
 /* Corpo */
+
+
+/* ****************************************************************************************************************************
+
+ INICIO FELISBINO    INICIO FELISBINO    INICIO FELISBINO    INICIO FELISBINO    INICIO FELISBINO    INICIO FELISBINO        
+
+   ****************************************************************************************************************************
+
+*/
+
 
 .container-fluid {
   display: flex;
@@ -205,4 +218,100 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
+
+.services {
+  margin: 20px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.services::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.services .card {
+  flex: 0 0 auto;
+  width: calc(100% / 5);
+}
+
+.services .card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card {
+  margin-left: 20px;
+}
+
+/* ****************************************************************************************************************************
+
+ FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO    FIM FELISBINO        
+
+   ****************************************************************************************************************************
+
+*/
+
+
+/* ****************************************************************************************************************************
+
+ INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    INICIO AFFONSO    
+
+   ****************************************************************************************************************************
+
+*/
+
+.logoCadastro {
+  max-width: 28vh;
+  height: auto;
+}
+
+.modalCadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.divideTipoCadastro {
+  margin-top: 4%;
+}
+
+.btnTipoCadastro {
+  border: 1px solid #012640;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btnTipoCadastro.active {
+  background-color: #012640;
+  color: white;
+}
+
+.descricaoNegocio {
+  resize: none;
+  min-height: 15vh;
+}
+
+.ajustaTela {
+  margin: 0;
+  margin-top: 2%
+}
+
+/* ********************************************************************************************************************
+
+        FIM AFFONSO     FIM AFFONSO     FIM AFFONSO     FIM AFFONSO     FIM AFFONSO     FIM AFFONSO     FIM AFFONSO 
+
+
+***********************************************************************************************************************
+*/
+
+

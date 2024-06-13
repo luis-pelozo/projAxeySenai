@@ -185,7 +185,7 @@
             <div class="card-body">
                <h5 class="card-title">Plano Grátis</h5>
                <p class="card-text">Descrição do plano básico.</p>
-               <a href="#" style="background-color: #2cc406; border-color: #2cc406;" class="btn btn-primary">Assinar</a>
+               <a href="../registro/login.php" style="background-color: #2cc406; border-color: #2cc406;" class="btn btn-primary">Assinar</a>
             </div>
          </div>
          <div style="border-color: #ce0b37;" class="card text-center">
@@ -193,7 +193,7 @@
             <div class="card-body">
                <h5 class="card-title">Plano Básico</h5>
                <p class="card-text">Descrição do plano básico.</p>
-               <a href="#" style="background-color: #ce0b37; border-color: #ce0b37;" class="btn btn-primary">Assinar</a>
+               <a href="../registro/login.php" style="background-color: #ce0b37; border-color: #ce0b37;" class="btn btn-primary">Assinar</a>
             </div>
          </div>
          <div style="border-color: #ffa800;" class="card text-center">
@@ -201,7 +201,7 @@
             <div class="card-body">
                <h5 class="card-title">Plano Plus</h5>
                <p class="card-text">Descrição do plano básico.</p>
-               <a href="#" style="background-color: #ffa800; border-color: #ffa800;" class="btn btn-primary">Assinar</a>
+               <a href="../registro/login.php" style="background-color: #ffa800; border-color: #ffa800;" class="btn btn-primary">Assinar</a>
             </div>
          </div>
          <div style="border-color: #3583ed;" class="card text-center">
@@ -209,7 +209,7 @@
             <div class="card-body">
                <h5 class="card-title">Plano Premium</h5>
                <p class="card-text">Descrição do plano básico.</p>
-               <a href="#" style="background-color: #3583ed; border-color: #3583ed;" class="btn btn-primary">Assinar</a>
+               <a href="../registro/login.php" style="background-color: #3583ed; border-color: #3583ed;" class="btn btn-primary">Assinar</a>
             </div>
          </div>
       </div>
