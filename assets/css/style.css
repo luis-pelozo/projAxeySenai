@@ -1,54 +1,63 @@
+/* Warmling */
+/* Geral */
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
 }
 
+/* Final Geral */
+/*Rating*/
+body {
+  background-color: #f8f9fa;
+  /* width: 100vw; */
+}
+
+textarea {
+  resize: none;
+  min-width: 20vh;
+  height: auto;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
 .rate {
-  float: left;
-  height: 46px;
-  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
+
 }
 
-.rate:not(:checked) > input {
-  position: absolute;
-  top: -9999px;
+.rate input[type="radio"] {
+  display: none;
 }
 
-.rate:not(:checked) > label {
-  float: right;
-  width: 1em;
-  overflow: hidden;
-  white-space: nowrap;
+.rate label {
+  font-size: 2rem;
+  color: grey;
   cursor: pointer;
-  font-size: 30px;
-  color: #ccc;
-}
-
-.rate:not(:checked) > label:before {
-  content: "★ ";
-}
-
-.rate > input:checked ~ label {
-  color: #ffc700;
-}
-
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-  color: #deb217;
+  transition: color 0.3s;
 }
 .body{
   background-color: #c59b08;
 }
 
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-  color: #c59b08;
+.rate input[type="radio"]:checked~label,
+.rate label:hover,
+.rate label:hover~label {
+  color: gold;
 }
 
+/* Final Parte Avaliação Estrelas */
+
+/* Corpo */
 
 
 /* ****************************************************************************************************************************
@@ -73,6 +82,111 @@ body {
   min-height: 100vh;
   /* margin: 0; */
 }
+
+/* Final Corpo */
+
+
+/* Fotos Perfil */
+/* .area-foto-perfil{
+
+} */
+
+.foto-perfil {
+  clip-path: circle();
+}
+
+/* Final Fotos Perfil */
+
+/* Area Botões */
+/* Area Botao Calendario */
+.area-botao {
+  align-items: center;
+}
+
+/* Final Area Botao Calendario */
+
+/* Botão Calendario */
+.botao-azul {
+  background-color: #0711FF;
+  border: none;
+  width: 100%;
+}
+
+.icone-botao-calendario {
+  color: #ffffff;
+  margin-right: 1%;
+}
+
+/* Final Botao Calendario */
+
+/* Botão Whats */
+.botao-verde {
+  background-color: #47C757;
+  border: none; 
+  width: 100%;
+}
+
+.icone-whats{
+  color: #ffffff
+}
+/* Final Botao Whats */
+/* Final area de Botões */
+
+/* Inicio Modal */
+
+.modal-content {
+  background-color: #001f3f;
+  /* Azul marinho */
+  color: #ffffff;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-days,
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-day,
+.calendar-date {
+  padding: 10px;
+  color: #ffffff;
+}
+
+.calendar-date:hover {
+  background-color: #f0f0f0;
+  color: #001f3f;
+  border-radius: 50%;
+}
+
+.btn-outline-secondary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #ffffff;
+  color: #001f3f;
+}
+
+.close {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.close:hover {
+  color: #f0f0f0;
+}
+
+/* Final Modal */
+
 
 .cardLogin {
   margin-top: 8vh;
@@ -104,6 +218,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .services {
@@ -198,4 +313,5 @@ body {
 
 ***********************************************************************************************************************
 */
+
 
