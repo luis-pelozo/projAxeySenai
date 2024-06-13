@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Info Prestador</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/projAxeySenai/assets/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- <link rel="stylesheet" href="../projAxeySenai/assets/css/style.css"> -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         .container-fluid {
             padding-left: 0;
             padding-right: 0;
@@ -46,53 +45,6 @@
             width: 33.33%;
             padding-right: 0.05%;
         }
-
-        /*Rating*/
-        body {
-            background-color: #f8f9fa;
-            /* width: 100vw; */
-        }
-
-        textarea {
-            resize: none;
-            min-width: 20vh;
-            height: auto;
-        }
-
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-
-        .rate {
-            display: flex;
-            justify-content: center;
-            flex-direction: row-reverse;
-            margin-bottom: 20px;
-            
-        }
-
-        .rate input[type="radio"] {
-            display: none;
-        }
-
-        .rate label {
-            font-size: 2rem;
-            color: grey;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .rate input[type="radio"]:checked~label,
-        .rate label:hover,
-        .rate label:hover~label {
-            color: gold;
-        }
-
-        /*Fim do Rating*/
 
         /*Botao Calendario*/
         .btn-calendario {
@@ -159,61 +111,6 @@
         .teste {
             margin-left: 6.5%;
         }
-
-        /* Modal */
-
-        .modal-content {
-            background-color: #001f3f;
-            /* Azul marinho */
-            color: #ffffff;
-        }
-
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .calendar-days,
-        .calendar-dates {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            text-align: center;
-        }
-
-        .calendar-day,
-        .calendar-date {
-            padding: 10px;
-            color: #ffffff;
-        }
-
-        .calendar-date:hover {
-            background-color: #f0f0f0;
-            color: #001f3f;
-            border-radius: 50%;
-        }
-
-        .btn-outline-secondary {
-            color: #ffffff;
-            border-color: #ffffff;
-        }
-
-        .btn-outline-secondary:hover {
-            background-color: #ffffff;
-            color: #001f3f;
-        }
-
-        .close {
-            color: #ffffff;
-            opacity: 1;
-        }
-
-        .close:hover {
-            color: #f0f0f0;
-        }
-
-        /* Fim do modal */
     </style>
 </head>
 
@@ -233,8 +130,8 @@
             <div class="col-sm-4 mt-2">
                 <!-- Foto de Perfil -->
                 <div class="col-sm-12">
-                    <div class="text-center foto-perfil mt-2">
-                        <img src="https://via.placeholder.com/150" alt="Ícone de usuário" class="mb-3" style="clip-path:circle()">
+                    <div class="text-center area-foto-perfil mt-2">
+                        <img src="https://via.placeholder.com/150" alt="Ícone de usuário" class="mb-3 foto-perfil">
                     </div>
                 </div>
                 <!-- Final Foto de Perfil -->
@@ -256,15 +153,15 @@
                 <!-- Final Avaliação Estrelas -->
                 <!-- Botões -->
                 <!-- Botão Agenda -->
-                <div class="col-sm-12" style="align-items: center">
+                <div class="col-sm-12 area-botao">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendarModal" style="background-color: #0711FF; border: none; width: 100%;">
-                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i>Verificar Diponibilidade </button>
+                    <button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#calendarModal">
+                        <i class="fa-regular fa-calendar icone-botao-calendario"></i>Verificar Diponibilidade </button>
                 </div>
                 <!-- Final Botão agenda -->
                 <!-- Botão Whats -->
-                <div class="col-sm-12">
-                    <button type="button" class="btn btn-success mt-2" id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>Entre em Contato</button>
+                <div class="col-sm-12 area-botao">
+                    <button type="button" class="btn btn-success mt-2 botao-verde" id="whatsappButton" ><i class="fa-brands fa-whatsapp icone-whats"></i>Entre em Contato</button>
                 </div>
                 <!-- Final Botão Whats -->
                 <!-- Final Botões -->
@@ -305,7 +202,7 @@
                                 <label for="cep">CEP</label>
                                 <input type="text" class="form-control" id="cep" requireds>
                                 <small id="passwordHelpBlock" class="form-text text-muted">
-                                <a  href="https://buscacepinter.correios.com.br/app/endereco/index.php" id="buscarCep" target="_blank">Não sei meu Cep</a>
+                                    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" id="buscarCep" target="_blank">Não sei meu Cep</a>
                                 </small>
                             </div>
                             <div class="form-group col-md-6">
@@ -371,6 +268,64 @@
             </div>
         </div>
         <!-- Final Modal -->
+        <!-- Inicio anuncios Destaque -->
+        <div class="services">
+            <h1>Serviços em destaque</h1>
+        </div>
+        <div class="services mt-4 mx-0">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 1</h5>
+                    <p class="card-text">Descrição breve do Serviço 1.</p>
+
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 2</h5>
+                    <p class="card-text">Descrição breve do Serviço 2.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 3</h5>
+                    <p class="card-text">Descrição breve do Serviço 3.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 4</h5>
+                    <p class="card-text">Descrição breve do Serviço 4.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 5</h5>
+                    <p class="card-text">Descrição breve do Serviço 5.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Serviço 6</h5>
+                    <p class="card-text">Descrição breve do Serviço 6.</p>
+                    <a href="paginas/cliente/telaAnuncio.php" class="btn btn-primary">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+        <!-- Final anuncios Destaque -->
+
     </div>
     <?php
     include '../../padroes/footer.php';
