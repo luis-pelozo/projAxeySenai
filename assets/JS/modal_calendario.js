@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const monthYear = document.getElementById("monthYear");
   const datesContainer = document.getElementById("dates");
 
-  // Define a data atual como a data inicial
   let currentDate = new Date();
 
   // Adiciona um evento de clique ao botão de mês anterior
