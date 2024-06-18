@@ -1,6 +1,6 @@
 
 <style>
-   .user {
+   .usuario {
    display: inline-block;
    width: 46px;
    height: 46px;
@@ -12,31 +12,31 @@
    text-decoration: none;
    color: inherit;
    }
-   .user i {
+   .usuario i {
    font-size: 24px;
    color: #fff;
    }
-   .search-container {
+   .menu {
    position: relative;
    flex-grow: 1;
    margin-right: 10px;
    left: 20px;
    }
-   .search-container input[type="search"] {
+   .menu input[type="search"] {
    padding-left: 2.5rem;
    width: 70%;
    }
-   .search-container i {
+   .menu i {
    position: absolute;
    left: 10px;
    top: 50%;
    transform: translateY(-50%);
    color: #495057;
    }
-   .logo {
+   .logoMenu {
    height: 40px;
    }
-   .anuncio {
+   .botaoAnuncio {
    background-color: #012640;
    color: gold;
    border-color: gold;
@@ -47,36 +47,36 @@
    font-weight: bold;
    }
    @media only screen and (max-width: 768px) {
-   .search-container {
+   .menu {
    left: 0px;
    flex-grow: 1;
    margin-right: 0px;
    }
-   .search-container input[type="search"] {
+   .menu input[type="search"] {
    padding-left: 2.0rem;
    width: 80%;
    margin-top: 5px;
    }
-   .search-container i {
+   .menu i {
    left: 10px;
    top: 50%;
    transform: translateY(-50%);
    color: #495057;
    margin-top: 2px;
    }
-   .logo {
+   .logoMenu {
    margin-top: 0;
    height: 25px;
    }
-   .anuncio,
-   .user {
+   .botaoAnuncio,
+   .usuario {
    display: none;
    }
-   .form-control[type="search"] {
+   .buscar[type="search"] {
    padding: 0;
    height: auto;
    }
-   .search-container i {
+   .menu i {
    top: 55%;
    left: 11px;
    font-size: 12px;
@@ -106,13 +106,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-nav">
    <a class="navbar-brand" href="/projAxeySenai/index.php">
 
-   <img class="logo" src="/projAxeySenai/assets/imgs/logo.png" alt="Minha Logo">
+   <img class="logoMenu" src="/projAxeySenai/assets/imgs/logo.png" alt="Minha Logo">
 
    </a>
    <div class="d-flex flex-grow-1 align-items-center">
-      <div class="search-container">
+      <div class="search-container menu">
          <i class="fas fa-search"></i>
-         <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+         <input class="form-control buscar" type="search" placeholder="Buscar" aria-label="Search">
       </div>
    </div>
    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -121,10 +121,10 @@
    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
          <li class="nav-item">
-            <button class="anuncio" onclick="window.location.href='/projAxeySenai/paginas/geral/planos.php'">ANUNCIE GRÁTIS</button>
+            <button class="botaoAnuncio" onclick="window.location.href='/projAxeySenai/paginas/geral/planos.php'">ANUNCIE GRÁTIS</button>
          </li>
          <li class="nav-item">
-            <a class="user"><i class="fa-solid fa-user"></i></a>
+            <a class="user usuario"><i class="fa-solid fa-user"></i></a>
          </li>
          <li class="nav-item d-lg-none">
             <a class="nav-link" href="#">Entrar/Cadastrar</a>

@@ -1,118 +1,6 @@
-<!doctype html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Info Prestador</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Major+Mono+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/projAxeySenai/assets/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <style>
-        .container-fluid {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-
-        .nave {
-            padding-right: 1%;
-            padding-left: 1%;
-        }
-
-
-        .left {
-            /* background: yellow; */
-            text-align: center;
-            width: 33.33%;
-            padding-left: 0.05%;
-        }
-
-        .center {
-            /* background: purple; */
-            text-align: center;
-            width: 33.33%;
-        }
-
-        .right {
-            /* background: gray; */
-            text-align: center;
-            width: 33.33%;
-            padding-right: 0.05%;
-        }
-
-        /*Botao Calendario*/
-        .btn-calendario {
-            background-color: #0711FF;
-            color: white;
-            align-items: center;
-            width: 75%;
-        }
-
-        .btn-calendario:hover {
-            color: white;
-        }
-
-
-        .verificado {
-            width: 13%;
-            height: 13%;
-        }
-
-        /*Serviços */
-
-        .services {
-            margin: 20px;
-            display: flex;
-            overflow-x: scroll;
-            gap: 10px;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .services::-webkit-scrollbar {
-            width: 0;
-            height: 0;
-        }
-
-        .services .card {
-            flex: 0 0 20%;
-        }
-
-        .services .card img {
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .card {
-            margin-left: 20px;
-        }
-
-        .btn-selectable {
-            display: block;
-            padding: 1% 2%;
-            margin: 2% auto;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            border-radius: 1%;
-            text-align: center;
-        }
-
-        .modal-backdrop {
-            backdrop-filter: blur(5px);
-        }
-
-        .teste {
-            margin-left: 6.5%;
-        }
-    </style>
-</head>
+<?php
+include '../../padroes/head.php';
+?>
 
 <body>
     <?php
@@ -131,7 +19,7 @@
                 <!-- Foto de Perfil -->
                 <div class="col-sm-12">
                     <div class="text-center area-foto-perfil mt-2">
-                        <img src="https://via.placeholder.com/150" alt="Ícone de usuário" class="mb-3 foto-perfil">
+                        <img src="../../assets/imgs/icones/img.svg" alt="Ícone de usuário" class="mb-3 foto-perfil">
                     </div>
                 </div>
                 <!-- Final Foto de Perfil -->
@@ -153,16 +41,14 @@
                 <!-- Final Avaliação Estrelas -->
                 <!-- Botões -->
                 <!-- Botão Agenda -->
-                <div class="col-sm-12 area-botao">
-                    <!-- <button type="button" id="btnCalendario">Success</button> -->
-
-                    <button type="button" class="btn btn-primary botao-azul" data-toggle="modal" data-target="#calendarModal">
-                        <i class="fa-regular fa-calendar icone-botao-calendario"></i>Verificar Diponibilidade </button>
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary botaoVerificaDisponibilidade" data-toggle="modal" data-target="#calendarModal">
+                        <i class="fa-regular fa-calendar"></i> Verificar Diponibilidade </button>
                 </div>
                 <!-- Final Botão agenda -->
                 <!-- Botão Whats -->
-                <div class="col-sm-12 area-botao">
-                    <button type="button" class="btn btn-success mt-2 botao-verde" id="whatsappButton" ><i class="fa-brands fa-whatsapp icone-whats"></i>Entre em Contato</button>
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-success mt-2 botaoWhats" id="whatsappButton"><i class="fa-brands fa-whatsapp"></i> Entre em Contato</button>
                 </div>
 
                 <!-- Final Botão Whats -->
@@ -233,7 +119,7 @@
                         </div>
                 </div>
 
-                <button  type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
+                <button type="submit" class="btn btn-primary" style="background-color: #012640; color:white ">Salvar</button>
 
                 <button id="btnCadastroProduto" type="button" class="btn btn-primary" style="background-color: #012640; color:white">Novo Serviço</button>
 
@@ -244,16 +130,16 @@
         <!-- Modal -->
         <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content modalCalendario">
                     <div class="modal-header">
                         <h5 class="modal-title" id="calendarModalLabel">Calendário</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close fechaModalCalendario" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                         <div class="calendar">
-                            <div class="calendar-header">
+                            <div class="headerCalendario">
                                 <button id="prevMonth" class="btn btn-sm btn-outline-secondary">&lt;</button>
                                 <div id="monthYear"></div>
                                 <button id="nextMonth" class="btn btn-sm btn-outline-secondary">&gt;</button>
@@ -362,14 +248,14 @@
     <script src="../../assets/js/modal_calendario.js"></script>
     <script src="../../assets/js/whats_link.js"></script>
     <script src="../../assets/js/valida_informacoes.js"></script>
- 
+
     <script>
-    // Adiciona um evento de clique ao botão
-    document.getElementById("btnCadastroProduto").addEventListener("click", function() {
-      // Redireciona para telaCadastroProduto.php
-      window.location.href = "telaCadastroProduto.php";
-    });
-  </script>
+        // Adiciona um evento de clique ao botão
+        document.getElementById("btnCadastroProduto").addEventListener("click", function() {
+            // Redireciona para telaCadastroProduto.php
+            window.location.href = "telaCadastroProduto.php";
+        });
+    </script>
 
 </body>
 
