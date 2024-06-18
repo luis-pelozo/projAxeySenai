@@ -1,243 +1,21 @@
-<!doctype html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perfil Do Prestador</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .container-fluid {
-            padding-left: 0;
-            padding-right: 0;
-        }
 
 
-        .nave {
-            padding-right: 1%;
-            padding-left: 1%;
-        }
-
-
-        .left {
-            /* background: yellow; */
-            text-align: center;
-            width: 33.33%;
-            padding-left: 0.05%;
-        }
-
-        .center {
-            /* background: purple; */
-            text-align: center;
-            width: 33.33%;
-        }
-
-        .right {
-            /* background: gray; */
-            text-align: center;
-            width: 33.33%;
-            padding-right: 0.05%;
-        }
-
-        /*Rating*/
-        body {
-            background-color: #f8f9fa;
-            /* width: 100vw; */
-        }
-
-        textarea {
-            resize: none;
-            min-width: 20vh;
-            height: auto;
-        }
-
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-
-        .rate {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            flex-direction: row-reverse;
-        }
-
-        .rate input[type="radio"] {
-            display: none;
-        }
-
-        .rate label {
-            font-size: 2rem;
-            color: grey;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .rate input[type="radio"]:checked~label,
-        .rate label:hover,
-        .rate label:hover~label {
-            color: gold;
-        }
-
-        /*Fim do Rating*/
-
-        /*Botao Calendario*/
-        .btn-calendario {
-            background-color: #0711FF;
-            color: white;
-            align-items: center;
-            width: 75%;
-        }
-
-        .btn-calendario:hover {
-            color: white;
-        }
-
-
-        .verificado {
-            width: 13%;
-            height: 13%;
-        }
-
-        /*Serviços */
-
-        .services {
-            margin: 20px;
-            display: flex;
-            overflow-x: scroll;
-            gap: 10px;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .services::-webkit-scrollbar {
-            width: 0;
-            height: 0;
-        }
-
-        .services .card {
-            flex: 0 0 20%;
-        }
-
-        .services .card img {
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .card {
-            margin-left: 20px;
-        }
-
-        .btn-selectable {
-            display: block;
-            padding: 1% 2%;
-            margin: 2% auto;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            border-radius: 1%;
-            text-align: center;
-        }
-
-        .modal-backdrop {
-            backdrop-filter: blur(5px);
-        }
-
-        .teste {
-            margin-left: 6.5%;
-        }
-
-        /* Modal */
-
-        .modal-content {
-            background-color: #001f3f;
-            /* Azul marinho */
-            color: #ffffff;
-        }
-
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .calendar-days,
-        .calendar-dates {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            text-align: center;
-        }
-
-        .calendar-day,
-        .calendar-date {
-            padding: 10px;
-            color: #ffffff;
-        }
-
-        .calendar-date:hover {
-            background-color: #f0f0f0;
-            color: #001f3f;
-            border-radius: 50%;
-        }
-
-        .btn-outline-secondary {
-            color: #ffffff;
-            border-color: #ffffff;
-        }
-
-        .btn-outline-secondary:hover {
-            background-color: #ffffff;
-            color: #001f3f;
-        }
-
-        .close {
-            color: #ffffff;
-            opacity: 1;
-        }
-
-        .close:hover {
-            color: #f0f0f0;
-        }
-
-        /* Fim do modal */
-    </style>
-</head>
+<?php
+include '../../padroes/head.php';
+?>
 
 <body>
-
     <?php
     include '../../padroes/nav.php';
     ?>
-    <!-- Inicio do Nav -->
-    <?php
-    include '../../padroes/nav.php';
-    ?>
-    <!-- Final do Nav -->
 
     <!-- Inicio Corpo de Pagina -->
-    <!-- <div class="row"> -->
     <div class="container">
-        <!-- Dados de Perfil -->
         <div class="row d-flex flex-wrap ">
-            <!-- Foto/Avaliação/Disponibilidade/Whats -->
             <div class="col-sm-4 mt-2">
-                <!-- Foto de Perfil -->
                 <div class="col-sm-12">
                     <div class="text-center foto-perfil mt-2">
-                        <img src="https://via.placeholder.com/150" alt="Ícone de usuário" class="mb-3" style="clip-path:circle()">
+                        <img src="../../assets/imgs/icones/img.svg" alt="Ícone de usuário" class="mb-3">
                     </div>
                 </div>
                 <!-- Final Foto de Perfil -->
@@ -259,15 +37,15 @@
                 <!-- Final Avaliação Estrelas -->
                 <!-- Botões -->
                 <!-- Botão Agenda -->
-                <div class="col-sm-12" style="align-items: center">
+                <div class="col-sm-12">
                     <!-- <button type="button" id="btnCalendario">Success</button> -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calendarModal" style="background-color: #0711FF; border: none; width: 100%;">
-                        <i class="fa-regular fa-calendar" style="color: #ffffff; margin-right: 1%;"></i> Verificar Diponibilidade </button>
+                    <button type="button" data-toggle="modal" data-target="#calendarModal" class="btn btn-primary botaoVerificaDisponibilidade">
+                        <i class="fa-regular fa-calendar"></i> Verificar Diponibilidade </button>
                 </div>
                 <!-- Final Botão agenda -->
                 <!-- Botão Whats -->
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-success mt-2" id="whatsappButton" style="background-color: #47C757; border: none; width: 100%"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i> Entre em Contato</button>
+                    <button type="button" class="btn btn-success mt-2 botaoWhats" id="whatsappButton"><i class="fa-brands fa-whatsapp"></i> Entre em Contato</button>
                 </div>
                 <!-- Final Botão Whats -->
                 <!-- Final Botões -->
@@ -366,16 +144,16 @@
             <!-- Modal -->
             <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
+                    <div class="modal-content modalCalendario">
                         <div class="modal-header">
                             <h5 class="modal-title" id="calendarModalLabel">Calendário</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close fechaModalCalendario" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="calendar">
-                                <div class="calendar-header">
+                                <div class="headerCalendario">
                                     <button id="prevMonth" class="btn btn-sm btn-outline-secondary">&lt;</button>
                                     <div id="monthYear"></div>
                                     <button id="nextMonth" class="btn btn-sm btn-outline-secondary">&gt;</button>

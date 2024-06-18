@@ -1,56 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <?php
 include '../../padroes/head.php';
 ?>
-<style>
-
-    @media (max-width: 768px) {
-        .anuncipo .container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .main-group-func {
-            margin-top: 20px;
-        }
-
-        .carousel-inner img {
-            width: 100%;
-            height: auto;
-        }
-    }
-.carousel-control-prev,
-.carousel-control-next {
-    background-color: transparent;
-    border: none;
-}
-
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-image: none;
-}
-
-.carousel-control-prev-icon::after,
-.carousel-control-next-icon::after {
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 30px; 
-    
-}
-
-.carousel-control-prev-icon::after {
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M5.5 0l-3 3 3 3z"/%3E%3C/svg%3E');
-}
-
-.carousel-control-next-icon::after {
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M2.5 0l3 3-3 3z"/%3E%3C/svg%3E');
-}
-
-</style>
 
 <body>
     <?php include '../../padroes/nav.php'; ?>
@@ -107,7 +57,7 @@ include '../../padroes/head.php';
         <h1>Serviços em destaque</h1>
     </div>
     <div class="container-fluid categories">
-    <div class="services mt-4 mx-0">
+        <div class="services mt-4 mx-0">
             <div class="card">
                 <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
                 <div class="card-body">
