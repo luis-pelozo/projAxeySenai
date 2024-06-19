@@ -221,33 +221,33 @@
          <div class="cards-wrapper">
             <div class="cards-container">
                <div style="border-color: #2cc406;" class="card text-center">
-                  <img src="gratis.png" alt="Logo" class="card-img-top mx-auto logo-img">
+                  <img src="assets/imgs/gratis.png" alt="Logo" class="card-img-top mx-auto logo-img">
                   <div class="card-body">
-                     <h5 class="card-title">Plano Grátis</h5>
+                     <h5 class="card-title">Grátis</h5>
                      <p class="card-text">Descrição do plano básico.</p>
                      <a href="../registro/login.php" style="background-color: #2cc406; border-color: #2cc406;" class="btn btn-primary">Assinar</a>
                   </div>
                </div>
                <div style="border-color: #ce0b37;" class="card text-center">
-                  <img src="basico.png" alt="Logo" class="card-img-top mx-auto logo-img">
+                  <img src="assets/imgs/basico.png" alt="Logo" class="card-img-top mx-auto logo-img">
                   <div class="card-body">
-                     <h5 class="card-title">Plano Básico</h5>
+                     <h5 class="card-title">Básico</h5>
                      <p class="card-text">Descrição do plano básico.</p>
                      <a href="../registro/login.php" style="background-color: #ce0b37; border-color: #ce0b37;" class="btn btn-primary">Assinar</a>
                   </div>
                </div>
                <div style="border-color: #ffa800;" class="card text-center">
-                  <img src="plus.png" alt="Logo" class="card-img-top mx-auto logo-img">
+                  <img src="assets/imgs/plus.png" alt="Logo" class="card-img-top mx-auto logo-img">
                   <div class="card-body">
-                     <h5 class="card-title">Plano Plus</h5>
+                     <h5 class="card-title">Plus</h5>
                      <p class="card-text">Descrição do plano básico.</p>
                      <a href="../registro/login.php" style="background-color: #ffa800; border-color: #ffa800;" class="btn btn-primary">Assinar</a>
                   </div>
                </div>
                <div style="border-color: #3583ed;" class="card text-center">
-                  <img src="premium.png" alt="Logo" class="card-img-top mx-auto logo-img">
+                  <img src="assets/imgs/premium.png" alt="Logo" class="card-img-top mx-auto logo-img">
                   <div class="card-body">
-                     <h5 class="card-title">Plano Premium</h5>
+                     <h5 class="card-title">Premium</h5>
                      <p class="card-text">Descrição do plano básico.</p>
                      <a href="../registro/login.php" style="background-color: #3583ed; border-color: #3583ed;" class="btn btn-primary">Assinar</a>
                   </div>

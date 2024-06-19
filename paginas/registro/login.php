@@ -3,11 +3,10 @@
 
 <?php
     include '../../padroes/head.php';
-    
 ?>
     <body>
-        <div class="container-fluid">
-            <div class="card col-md-4 cardLogin" style="border-radius: 8px">
+        <div class="container cardLogin">
+            <div class="card cardLogin" style="border-radius: 8px">
                 <img src="../../assets/imgs/logoAxey.png" class="card-img-top" alt="Imagem de Login">
                 <input type="text" class="form-control form-control-sm" style="border-radius: 8px" placeholder="Usuário">
                 <input type="password" class="form-control form-control-sm" style="border-radius: 8px" placeholder="Senha">
