@@ -221,7 +221,7 @@
          <div class="cards-wrapper">
             <div class="cards-container">
                <div style="border-color: #2cc406;" class="card text-center">
-                  <img src="gratis.png" alt="Logo" class="card-img-top mx-auto logo-img">
+                  <img src="assets/imgs/gratis.png" alt="Logo" class="card-img-top mx-auto logo-img">
                   <div class="card-body">
                      <h5 class="card-title">Grátis</h5>
                      <p class="card-text">Descrição do plano básico.</p>
@@ -229,7 +229,7 @@
                   </div>
                </div>
                <div style="border-color: #ce0b37;" class="card text-center">
-                  <img src="basico.png" alt="Logo" class="card-img-top mx-auto logo-img">
+                  <img src="assets/imgs/basico.png" alt="Logo" class="card-img-top mx-auto logo-img">
                   <div class="card-body">
                      <h5 class="card-title">Básico</h5>
                      <p class="card-text">Descrição do plano básico.</p>
@@ -237,7 +237,7 @@
                   </div>
                </div>
                <div style="border-color: #ffa800;" class="card text-center">
-                  <img src="plus.png" alt="Logo" class="card-img-top mx-auto logo-img">
+                  <img src="assets/imgs/plus.png" alt="Logo" class="card-img-top mx-auto logo-img">
                   <div class="card-body">
                      <h5 class="card-title">Plus</h5>
                      <p class="card-text">Descrição do plano básico.</p>
@@ -245,7 +245,7 @@
                   </div>
                </div>
                <div style="border-color: #3583ed;" class="card text-center">
-                  <img src="premium.png" alt="Logo" class="card-img-top mx-auto logo-img">
+                  <img src="assets/imgs/premium.png" alt="Logo" class="card-img-top mx-auto logo-img">
                   <div class="card-body">
                      <h5 class="card-title">Premium</h5>
                      <p class="card-text">Descrição do plano básico.</p>
