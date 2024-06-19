@@ -326,7 +326,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <button class="anuncio">ANUNCIE GRÁTIS</button>
+                    <button class="anuncio" onclick="location.href='paginas/geral/planos.php'">ANUNCIE GRÁTIS</button>
                 </li>
                 <li class="nav-item">
                     <a class="user"><i class="fa-solid fa-user"></i></a>
