@@ -1,63 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        textarea {
-            resize: none;
-            min-width: 20vh;
-            height: auto;
-        }
-
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-
-        .rate {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            flex-direction: row-reverse;
-        }
-
-        .rate input[type="radio"] {
-            display: none;
-        }
-
-        .rate label {
-            font-size: 2rem;
-            color: grey;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .rate input[type="radio"]:checked~label,
-        .rate label:hover,
-        .rate label:hover~label {
-            color: gold;
-        }
-    </style>
-</head>
-
-<body>
+<?php
+include '../../padroes/head.php';
+?>
+   <body class="fundoTelaaa">
 
     <?php
     include '../../padroes/nav.php';
     ?>
     <div class="container d-flex justify-content-center">
-        <div class="form-container col-12 col-md-8 col-lg-6">
+        <div class="form-container col-12 col-md-8 col-lg-6 containerFormulario">
             <h1 class="text-center py-2">Avaliação</h1>
             <div class="text-center">
                 <img src="https://via.placeholder.com/150" alt="Ícone de usuário" class="mb-3">
@@ -117,7 +67,7 @@
                 </div>
                 <div class="form-group">
                     <label for="mensagem">Observação</label>
-                    <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="4"></textarea>
+                    <textarea class="form-control camnpoAvalia" id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="4"></textarea>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn text-light" style="background-color: #1B3C54; width: 57%;">Enviar</button>
